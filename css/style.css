@@ -1,0 +1,51 @@
+/*
+Colors used:
+Primary Color (Black): #12130F;
+Primary Color (White): #FFFFFF;
+Primary Color (Grey): ##E7E7E7;
+Secondary Color (Light Lavender): #AFB4DB;
+Secondary Color (Dark Lavender): #A6A5C4;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+body {
+    background-color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px; /* Sets the font size to 16px */
+    font-weight: 300; /* Sets the font weight to 300 */
+    line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+    color: #12130F;
+      }
+      
+h1, h2, h3, h4 {
+        line-height: 1.4;
+      }
+    
+h1 {
+        font-size: 2em;
+        font-weight: 700;
+      }
+      
+h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+      }
+      
+h3 {
+        font-size: 1.3em;
+        font-weight: 400;
+      }
+      
+h4 {
+        font-size: 1em;
+        font-weight: 400;
+      }
+
+img {
+        width: 100%;
+      }
+
+.logo {
+        width: 50%;
+}
