@@ -49,3 +49,21 @@ img {
 .logo {
         width: 50%;
 }
+
+a {
+        color: #AFB4DB;
+        text-decoration: none; /* No underlining */
+      }
+
+        a:hover {
+        color: #A6A5C4;
+        text-decoration: underline; /* Underlining when hovering over a link */
+      }
+
+        a:visited { /* visited link */
+        color: #AFB4DB;
+      }
+
+        a:active { /* selected link */
+        color: #4D5269;
+      }
