@@ -74,13 +74,15 @@ a {
         background-color: #12130F;
         color: #ffffff !important; /* needed to override the default link color */
         font-weight: 400;
-        padding: 10px;
+        margin: 4px 4px 0px 0px;
+        padding: 12px 24px;
         border-radius: 3px;
         transition: 0.2s opacity;
       }
 
         .button:hover {
-        opacity: 0.8; /* Reduces the opacity of the button to 80% */
+        opacity: 0.8;
+        text-decoration: none; /* No underlining */
       }
 
         .button:active {
