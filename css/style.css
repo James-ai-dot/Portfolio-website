@@ -5,6 +5,7 @@ Primary Color (White): #FFFFFF;
 Primary Color (Grey): #E7E7E7;
 Secondary Color (Light Lavender): #AFB4DB;
 Secondary Color (Dark Lavender): #A6A5C4;
+Secondary Color (Grey Lavender): #4D5269;
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
@@ -67,3 +68,21 @@ a {
         a:active { /* selected link */
         color: #4D5269;
       }
+
+.button {
+        display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+        background-color: #12130F;
+        color: #ffffff !important; /* needed to override the default link color */
+        font-weight: 400;
+        padding: 10px;
+        border-radius: 3px;
+        transition: 0.2s opacity;
+      }
+
+        .button:hover {
+        opacity: 0.8; /* Reduces the opacity of the button to 80% */
+      }
+
+        .button:active {
+        color: #AFB4DB;        
+}
