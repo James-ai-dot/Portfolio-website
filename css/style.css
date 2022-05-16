@@ -10,81 +10,173 @@ Secondary Color (Grey Lavender): #4D5269;
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #12130F;
+  padding: 10px 0;
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+  box-shadow: 4px 4px 4px 0px rgba(18, 19, 15, 0.25);
+}
+
+main {
+  padding-top: 75px;
+}     
+
+
+nav {
+  float: right;
+  display: inline-block;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: right;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  font-weight: 700;
+  color: #ffffff !important;
+}
+
+nav > ul > li > a:hover {
+  color: #AFB4DB !important;
+  text-decoration: none; /* No underlining */
+}
+
 body {
-    background-color: #ffffff;
-    font-family: 'Manrope', sans-serif;
-    font-size: 16px; /* Sets the font size to 16px */
-    font-weight: 300; /* Sets the font weight to 300 */
-    line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-    color: #12130F;
-      }
-      
+  background-color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px; 
+  font-weight: 300; 
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #12130F;
+}
+
+footer {
+  background-color: #A6A5C4;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
 h1, h2, h3, h4 {
-        line-height: 1.4;
-      }
-    
+  line-height: 1.4;
+}
+
 h1 {
-        font-size: 2em;
-        font-weight: 700;
-      }
+  font-size: 2em;
+  font-weight: 700;
+}
+
       
 h2 {
-        font-size: 1.5em;
-        font-weight: 700;
-      }
+  font-size: 1.5em;
+  font-weight: 700;
+}
       
 h3 {
-        font-size: 1.3em;
-        font-weight: 400;
-      }
+  font-size: 1.3em;
+  font-weight: 400;
+}
       
 h4 {
-        font-size: 1em;
-        font-weight: 400;
-      }
+  font-size: 1em;
+  font-weight: 400;
+}
 
 img {
-        width: 100%;
-      }
-
+  width: 100%;
+}
+      
 .logo {
-        width: 50%;
+  max-width: 250px;
+  padding-top: 10px;
+}
+      
+a {
+  color: #ffffff;
+  text-decoration: none; /* No underlining */
+}
+      
+a:hover {
+  opacity: 0.5;
+  text-decoration: underline; /* Underlining when hovering over a link */
+}
+      
+a:active {
+  color: #4D5269;
 }
 
-a {
-        color: #AFB4DB;
-        text-decoration: none; /* No underlining */
-      }
-
-        a:hover {
-        color: #A6A5C4;
-        text-decoration: underline; /* Underlining when hovering over a link */
-      }
-
-        a:visited { /* visited link */
-        color: #AFB4DB;
-      }
-
-        a:active { /* selected link */
-        color: #4D5269;
-      }
+.avatar {
+  border-radius: 50%;
+  max-width: 15%;
+}
 
 .button {
-        display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-        background-color: #12130F;
-        color: #ffffff !important; /* needed to override the default link color */
-        font-weight: 400;
-        margin: 4px 4px 0px 0px;
-        padding: 12px 24px;
-        border-radius: 3px;
-        transition: 0.2s opacity;
-      }
-
-        .button:hover {
-        opacity: 0.8;
-        text-decoration: none; /* No underlining */
-      }
-
-        .button:active {
-        color: #AFB4DB;        
+  display: inline-block; 
+  background-color: #12130F;
+  color: #ffffff !important;
+  font-weight: 400;
+  margin: 4px 4px 0px 0px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  transition: 0.2s opacity;
 }
+      
+.button:hover {
+  opacity: 0.8;
+  text-decoration: none; /* No underlining */
+}
+      
+.button:active {
+  color: #AFB4DB;        
+}
+
+/* Layout styling */
+
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+
+.socials {
+  padding: 0;
+  display: inline-block;
+  max-width: 40px;
+  margin: 10px 15px 10px 15px;
+}
+
+#hero {
+  background-color: #12130F;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+#hero h1 {
+  color: #A6A5C4;    
+  }
+
+#work .row { 
+  padding-bottom: 25px; 
+}
+

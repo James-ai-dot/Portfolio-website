@@ -28,7 +28,8 @@
 
 <!--header-->
 <header>
-    <div><img class="logo" src="img/name_logo.svg" alt="James_David">
+    <div class="container">
+      <img class="logo" src="img/name_logo.svg" alt="James_David">
     <nav>
       <ul>
         <li><a href="index.html">Work</a></li>
@@ -44,7 +45,8 @@
  
   <!--hero section-->
     <div id="hero">
-        <div>
+        <div class="container">
+            <img class="avatar" src="img/avatar.jpg" alt="Avatar">
             <h1>
              Hi, I’m James - a UX/UI designer based in Vienna, Austria.
             </h1>
@@ -58,7 +60,7 @@
 <div id="work">
     
     <!--open container/wrapper-->
-    <div>
+    <div class="container">
       <!--open row-->
       <div>
         <h2>Recent work</h2>
@@ -68,7 +70,7 @@
     <!--end container/wrapper-->
 
     <!--Vintage Life-->
-    <div><!-- open row that holds (2) columns for project -->
+    <div class="row"><!-- open row that holds (2) columns for project -->
       <div><!-- open first column (used for image) -->
         <picture>
           <source srcset="img/vintagelife/vintagelife_cover@2x.jpg" media="(max-width:767px)">
@@ -90,7 +92,7 @@
     </div><!-- end row that holds (2) columns for project -->
         
     <!--Onestop Club-->
-    <div><!-- open row that holds (2) columns for project -->
+    <div class="row"><!-- open row that holds (2) columns for project -->
               <div><!-- open first column (used for image) -->
                 <picture>
                   <source srcset="img/onestop/onestopclub_cover@2x.jpg" media="(max-width:767px)">
@@ -112,7 +114,7 @@
     </div><!-- end row that holds (2) columns for project -->
           
     <!--Rewind-->
-    <div><!-- open row that holds (2) columns for project -->
+    <div class="row"><!-- open row that holds (2) columns for project -->
             <div><!-- open first column (used for image) -->
               <picture>
                 <source srcset="img/rewind/rewind_cover@2x.jpg" media="(max-width:767px)">
@@ -138,7 +140,7 @@
 
 <!--footer-->
 <footer id="contact">
-    <div>
+    <div class="container">
         <h2>Get in Touch</h2>
         <p>
          Like what I'm doing? Let's get in touch !
@@ -148,19 +150,24 @@
         <a href="https://wa.me/4367764165219" target="_blank">Whatsapp</a>
       </div>
     </div>
-      <div>
-        <!--Social Media Layout and Placeholders-->
-        <br>
+    <div>
+      <!--Social Media Layout and Placeholders-->
+      <ul>
         <!--Linkedin-->
-        <a href="https://www.linkedin.com/in/jamesdavidturrell/" target="_blank">
-          <i class="fa-brands fa-linkedin fa-2xl"></i> 
-        </a>
+        <li class="socials">
+          <a href="https://www.linkedin.com/in/jamesdavidturrell/" target="_blank">
+            <i class="fab fa-linkedin-in" manrope-hidden=""true"></i>        
+          </a>
+        </li>
         <!--Behance-->
-        <a href="https://www.behance.net/jamesdavid7" target="_blank">
-          <i class="fa-brands fa-behance-square fa-2xl"></i>
-        </a>
+        <li class="socials">
+          <a href="https://www.behance.net/jamesdavid7" target="_blank">
+            <i class="fab fa-behance"></i>        
+          </a>
+        </li>
+        </ul>
       </div>
-        <p>Copyright James David 2022</p>
+        <p>© James David 2022</p>
 </footer>
 
 </body>
