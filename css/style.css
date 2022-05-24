@@ -97,7 +97,7 @@ h4 {
 /* Header and Main Navigation */
 
 main {
-  padding-top: 75px;
+  padding-top: 55px;
 }
 
 header {
@@ -109,18 +109,36 @@ header {
   box-shadow: 4px 4px 4px 0px rgba(18, 19, 15, 0.25);
 }
 
-nav {
-  width: 100%;
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle,
+.navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  padding-right: 0;
+  top: 5px;
+  font-size: 20px;
+}
+
+.navtoggle.responsive li {
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
 }
 
 nav > ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
   text-align: left;
-}
-
-nav > ul > li {
-  display: inline-block;
 }
 
 nav > ul > li > a {
@@ -195,7 +213,7 @@ footer ul li {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 150px;
   padding-top: 10px;
 }
 
@@ -258,9 +276,9 @@ footer ul li {
 }
 
 /* ==============================
-Medium devices (640px and larger)
+Medium devices (641px and larger)
 ================================= */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   header {
     text-align: unset;
     padding: 20px 0 13px;
@@ -272,12 +290,30 @@ Medium devices (640px and larger)
     margin-top: 4px;
   }
 
+  nav > ul > li {
+    display: inline-block;
+    margin: 1em 0;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
   .col-md-6 {
     width: 50%;
   }
 
   #about-page h3 {
     margin-top: 0;
+  }
+
+  .logo {
+    max-width: 250px;
+    padding-top: 10px;
   }
 }
 
