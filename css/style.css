@@ -6,6 +6,12 @@ Primary Color (Grey): #E7E7E7;
 Secondary Color (Light Lavender): #AFB4DB;
 Secondary Color (Dark Lavender): #A6A5C4;
 Secondary Color (Grey Lavender): #4D5269;
+
+Vintage life Colors:
+Primary Color (Cobalt Green): #60B49F;
+Primary Color (Black): #242423;
+Secondary Color (Light Green): #BFE1D9;
+Secondary Color (Grey): #F6F6F6;
 */
 
 * {
@@ -92,6 +98,11 @@ h3 {
 h4 {
   font-size: 1em;
   font-weight: 400;
+}
+
+#vintage-life h1,
+h2 {
+  color: #60b49f;
 }
 
 /* Header and Main Navigation */
