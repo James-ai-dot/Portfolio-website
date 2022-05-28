@@ -36,7 +36,6 @@ div {
 
 img {
   width: 100%;
-  box-shadow: 3px 3px 10px 0 rgba(18, 19, 15, 0.25);
 }
 
 a {
@@ -62,6 +61,19 @@ a:active {
   padding: 12px 24px;
   border-radius: 3px;
   transition: 0.2s opacity;
+}
+
+.pill {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 .button:hover {
@@ -110,7 +122,7 @@ h4 {
 
 header {
   background-color: #12130f;
-  padding: 16px 0;
+  padding: 6px 0;
   display: inline-block;
   width: 100%;
   position: fixed;
@@ -118,7 +130,7 @@ header {
 }
 
 main {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 .navtoggle li:not(:last-child) {
@@ -214,6 +226,10 @@ footer ul li {
   margin-right: auto;
 }
 
+.shadow {
+  box-shadow: 3px 3px 10px 0 rgba(18, 19, 15, 0.15);
+}
+
 #hero {
   background-color: #12130f;
   color: #ffffff;
@@ -232,17 +248,21 @@ footer ul li {
 
 .logo {
   max-width: 150px;
-  padding-top: 10px;
+  padding: 10px 0 10px 0;
 }
 
-.portfolio-logo {
-  max-width: 300px;
-  padding: 20px 0 20px 0;
+#head .logo {
+  max-width: 80%;
+  padding: 0;
+  margin: 32px 0 32px;
+}
+
+#head img {
+  margin-top: 32px;
 }
 
 .row {
-  margin: 32px 0; /* 20px top and bottom, 0 left and right */
-  padding: 16px 0;
+  padding: 32px 0;
 }
 
 .row-pb-0 {
@@ -259,8 +279,46 @@ footer ul li {
   padding-bottom: 25px;
 }
 
-#head-mockup {
-  margin-top: 150px;
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(166, 165, 196, 0.5);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+  background: #afb4db;
+}
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
 }
 
 /* ==============================
@@ -305,7 +363,6 @@ Medium devices (641px and larger)
   }
 
   #head {
-    padding: 50px 20px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -325,7 +382,7 @@ Large devices (1024px or larger)
 
   [class*="col-"] {
     float: left;
-    padding: 0 20px;
+    padding: 20px;
   }
 
   [class*="col-"]:first-child {

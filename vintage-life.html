@@ -85,17 +85,24 @@
             <div class="row">
               <!--open first column-->
               <div class="col-md-6">
-                <img class="portfolio-logo" src="img/vintagelife/logo.svg" alt="Vintage-life-logo" />
-                <h2>No BS, just vintage !</h2>
+                <img class="logo" src="img/vintagelife/logo.svg" alt="Vintage-life-logo" />
+                <!--pills start -->
+                <br>
+                <button class="pill">Mobile app</button>
+                <button class="pill">Web responsive</button>
+                <button class="pill">UI/UX Design</button>
+                <button class="pill">Branding</button>
+                <button class="pill">iOS</button>
+              <!-- pills end -->
                 <p>
-                  Vintage life’s mission is to create a convenient platform for
+                  <em>Vintage Life</em> aims to create a convenient platform for
                   users to find and buy vintage apparel online without having to
-                  visit a physical store.
+                  visit a physical location.
                 </p>
                 <p>
                   The re-use of old clothing gives old
                   garments another lease on life while minimizing the consumption
-                  of raw materials to produce new products. Vintage Life offers a
+                  of raw materials to produce new products. <em>Vintage Life</em> offers a
                   user friendly and accessible online store.
                 </p>
                 <h4>responsibilities</h4>
@@ -104,7 +111,7 @@
               </div>
               <!--end first column-->
               <!--open second column-->
-              <div id="head-mockup" class="col-md-6">
+              <div class="col-md-6">
                 <picture>
                   <source
                   srcset="img/vintagelife/header@2x.png"
@@ -121,15 +128,15 @@
             <!--end row for (2 columns)-->
           </div>
           <!--end container/wrapper-->
-        </div>
+
           
-        <!--open container/wrapper-->
+          <!--open container/wrapper-->
         <div class="container">
-          <div>
-            <h2>About Vintage Life</h2>
-          </div>
           <!--open row for two columns-->
           <div class="row">
+            <div>
+              <h2>About Vintage Life</h2>
+            </div>
             <!--open first column-->
             <div class="col-md-6">
               <p>
@@ -156,35 +163,46 @@
           <!--end row for (2) columns-->
         </div>
         <!--end of container/wrapper-->
+        
+        
+        
+        
+        <!-- end section block -->
       </div>
 
-      <!--open whole section block-->
-      <div>
+
         <!--open container/wrapper-->
         <div class="container">
+          <!-- open row -->
+          <div class="row">
           <div>
             <h2>The Process & Challenge</h2>
-          </div>
+          </div>     
           <!--process breakdown-->
-          <picture>
-            <source
-              srcset="img/vintagelife/process-breakdown@2x.png"
+          <div>
+            <picture>
+              <source
+              srcset="img/vintagelife/process-breakdown@2x.jpg"
               media="(max-width:767px)"
-            />
-            <img
-              src="img/vintagelife/process-breakdown@1x.png"
+              />
+              <img
+              src="img/vintagelife/process-breakdown@1x.jpg"
               alt="Process Breakdown"
-            />
-          </picture>
+              />
+            </picture>
+          </div>
+          </div>
+          <!-- end row -->
         </div>
         <!--end of container/wrapper-->
 
         <!--open container/wrapper-->
-        <!--branding-->
         <div class="container">
-          <h3>Mission Statement</h3>
-          <p>
-            Vintage Life’s mission is to create a convenient platform for users
+          <!-- open row -->
+          <div class="row">
+            <h3>Mission Statement</h3>
+            <p>
+              Vintage Life’s mission is to create a convenient platform for users
             to find and buy vintage apparel online.
           </p>
           <div>
@@ -213,6 +231,8 @@
             looking for that one elusive accessory that will make your outfit
             whole :)
           </p>
+        </div>
+        <!-- end row -->
         </div>
         <!--end of container/wrapper-->
 
@@ -263,14 +283,16 @@
           <!--user flow diagram-->
           <div>
             <picture>
-              <source
+                <source
                 srcset="img/vintagelife/user-flow@2x.png"
                 media="(max-width:767px)"
-              />
-              <img
+                />
+              </a>
+                <img
                 src="img/vintagelife/user-flow@1x.png"
                 alt="User Flow Diagram"
-              />
+                />
+              </a>
             </picture>
           </div>
         </div>
@@ -643,32 +665,37 @@
           </div>
         </div>
       </div>
+      <!-- return to top -->
+      <a href="javascript:" id="return-to-top"><i class="fas fa-chevron-up"></i></a>
     </main>
 
     <!--footer-->
     <footer id="contact">
       <div class="container">
         <h2>Get in Touch</h2>
-        <p>Like what I'm doing? Let's get in touch !</p>
         <div>
-          <a href="mailto:james.david.turrell@gmail.com">Email me</a>
-          <a href="https://wa.me/4367764165219" target="_blank">Whatsapp</a>
+          <p>Email me:</p> 
+          <p>james.david.turrell[a]gmail.com</p>
         </div>
       </div>
       <div>
         <!--Social Media Layout and Placeholders-->
         <br />
         <!--Linkedin-->
-        <a
+        <span class="fa-stack fa-2x">
+          <a
           href="https://www.linkedin.com/in/jamesdavidturrell/"
           target="_blank"
-        >
-          <i class="fab fa-linkedin-in fa-xl"></i>
+          >
+          <i class="fa-brands fa-linkedin" manrope-hidden="true"></i>
         </a>
+      </span>
         <!--Behance-->
+        <span class="fa-stack fa-2x">
         <a href="https://www.behance.net/jamesdavid7" target="_blank">
-          <i class="fab fa-behance fa-xl"></i>
+          <i class="fa-brands fa-behance-square"></i>            
         </a>
+        </span>
       </div>
       <p>© James David 2022</p>
     </footer>
