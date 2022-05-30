@@ -59,7 +59,7 @@
             <ul>
               <li><a href="index.html">Work</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="#contact onclick="menuToggle()">Contact</a></li>
+              <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
               <li>
                 <a
                   href="javascript:void(0);"
@@ -88,11 +88,11 @@
                 <img class="logo" src="img/vintagelife/logo.svg" alt="Vintage-life-logo" />
                 <!--pills start -->
                 <br>
-                <button class="pill">Mobile app</button>
-                <button class="pill">Web responsive</button>
-                <button class="pill">UI/UX Design</button>
-                <button class="pill">Branding</button>
-                <button class="pill">iOS</button>
+                <span class="pill">Mobile app</span>
+                <span class="pill">Web responsive</span>
+                <span class="pill">UI/UX Design</span>
+                <span class="pill">Branding</span>
+                <span class="pill">iOS</span>
               <!-- pills end -->
                 <p>
                   <em>Vintage Life</em> aims to create a convenient platform for
@@ -129,7 +129,7 @@
           </div>
           <!--end container/wrapper-->
 
-          
+          <!-- Introduction -->
           <!--open container/wrapper-->
         <div class="container">
           <!--open row for two columns-->
@@ -167,467 +167,475 @@
         
         
         
-        <!-- end section block -->
-      </div>
-
-
+        <!-- Opening -->
         <!--open container/wrapper-->
-        <div class="container">
+        <div class="container" class="blur">
           <!-- open row -->
           <div class="row">
-          <div>
-            <h2>The Process & Challenge</h2>
-          </div>     
-          <!--process breakdown-->
-          <div>
-            <picture>
-              <source
-              srcset="img/vintagelife/process-breakdown@2x.jpg"
-              media="(max-width:767px)"
-              />
-              <img
-              src="img/vintagelife/process-breakdown@1x.jpg"
-              alt="Process Breakdown"
-              />
-            </picture>
-          </div>
+            <h3 class="h3-box">Mission Statement</h3>
+            <div class="text-box">
+              <p>
+                Vintage Life’s mission is to create a convenient platform for users
+                to find and buy vintage apparel online.
+              </p>
+            </div>
+            <h3 class="h3-box">Brand Values</h3>
+            <div class="text-box">
+              <p>
+                Buying vintage is an environmentally friendly way to shop. The
+                re-use of old clothing gives old garments another lease on life
+                while minimizing the consumption of raw materials to produce new
+                products.
+              </p>
+              <p>
+                Vintage Life offers a user friendly and accessible e-commerce
+                platform to easily purchase secondhand products.
+              </p>
+            </div>
+            <h3 class="h3-box">Brand Voice / Writing Style</h3>
+            <div class="text-box">
+              <p>
+                No BS. Vintage Life may be online but it should feel accessible and
+                laidback like your local vintage clothing store ! Still, what you
+                see is what you get, just because we are casual does not mean we are
+                not transparent.
+              </p>
+              <p>
+                We’re on a mission to make online secondhand apparel shopping
+                convenient for all of you who don’t have time to go to stores or are
+                looking for that one elusive accessory that will make your outfit
+                whole :)
+              </p>
+            </div>
           </div>
           <!-- end row -->
         </div>
         <!--end of container/wrapper-->
-
+        
+        <!-- User stories -->
         <!--open container/wrapper-->
+        <div class="container">
+          <!--open row for two columns-->
+          <div class="row">
+            <!-- open first column -->
+            <div class="col-md-6">
+              <h2>User Stories</h2>
+              <p>
+                The creation of user stories helped narrow down the scope of the project into manageable tasks. 
+                User needs and brief requirements helped identify the main features of the app.
+              </p>
+              <a href="">View user stories</a>
+            </div>
+            <!-- end first column -->
+            <!-- open second column -->
+            <div class="col-md-6">
+              <p class="quote">
+                As a new customer, I want to access the inventory without having to register, so that I can make sure this store has what I’m looking for before having to create an account.
+              </p>
+              <p class="quote">
+                As a returning customer, I want to see an overview of my previous activity, so that I can view previous purchases and search history.
+              </p>
+              <p class="quote">
+                As a customer, I want to have access to advanced filtering options, so that I don’t have to browse through a lot of products to find what I’m looking for.
+              </p>
+            </div>
+            <!-- end second column -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!--end of container/wrapper-->
+        
+        <!-- User flow -->
+        <!-- open container/wrapper -->
         <div class="container">
           <!-- open row -->
           <div class="row">
-            <h3>Mission Statement</h3>
-            <p>
-              Vintage Life’s mission is to create a convenient platform for users
-            to find and buy vintage apparel online.
-          </p>
-          <div>
-            <h3>Brand Values</h3>
-            <p>
-              Buying vintage is an environmentally friendly way to shop. The
-              re-use of old clothing gives old garments another lease on life
-              while minimizing the consumption of raw materials to produce new
-              products.
-            </p>
-            <p>
-              Vintage Life offers a user friendly and accessible e-commerce
-              platform to easily purchase secondhand products.
-            </p>
-          </div>
-          <h3>Brand Voice / Writing Style</h3>
-          <p>
-            No BS. Vintage Life may be online but it should feel accessible and
-            laidback like your local vintage clothing store ! Still, what you
-            see is what you get, just because we are casual does not mean we are
-            not transparent.
-          </p>
-          <p>
-            We’re on a mission to make online secondhand apparel shopping
-            convenient for all of you who don’t have time to go to stores or are
-            looking for that one elusive accessory that will make your outfit
-            whole :)
-          </p>
-        </div>
-        <!-- end row -->
-        </div>
-        <!--end of container/wrapper-->
-
-        <!--open container/wrapper-->
-        <div class="container">
-          <h2>User Flow</h2>
-          <p>
-            To create my user flow diagram I chose to focus on the following
-            user stories:
-          </p>
-          <ul>
-            <li>
-              As a new customer, I want to access the inventory without having
-              to register, so that I can make sure this store has what I’m
-              looking for before having to create an account
-            </li>
-            <li>
-              As a customer, I want to be able to place multiple items in a
-              shopping cart, so that I can purchase more than one item at a time
-            </li>
-            <li>
-              As a returning customer, I want to see an overview of my previous
-              activity, so that I can view previous purchases and search history
-            </li>
-            <li>
-              As a returning customer, I want to be able to save items that I
-              cannot buy to a wish list, so that I can purchase them at a later
-              date
-            </li>
-            <li>
-              As a customer, I want there to be a variety of payment options, so
-              that I can choose the payment method that suits me best
-            </li>
-            <li>
-              As a customer, I want to be able to see when stock is on sale, so
-              that I can save money
-            </li>
-            <li>
-              As a customer, I want to have access to advanced filtering
-              options, so that I don’t have to browse through a lot of products
-              to find what I’m looking for
-            </li>
-            <li>
-              As a frequent customer, I want to see recommendations of products
-              I may like, so that I find items I might not otherwise on my own
-            </li>
-          </ul>
-          <!--user flow diagram-->
-          <div>
-            <picture>
+            <!-- open first column -->
+            <div class="col-md-6">
+              <h2>User Flow</h2>
+              <p>
+                With a clear understanding of the user in mind thanks to the user stories, user flows were the first step towards designing a solution. 
+                Through user flows, a rough idea of the required screens was developed. 
+                These user flows were then combined into a user flow diagram representing all the steps will take to complete the tasks.
+              </p>
+            </div>
+            <!-- end first column -->
+            <!-- open second column -->
+            <div class="col-md-6">
+              <picture>
                 <source
                 srcset="img/vintagelife/user-flow@2x.png"
                 media="(max-width:767px)"
                 />
               </a>
-                <img
-                src="img/vintagelife/user-flow@1x.png"
-                alt="User Flow Diagram"
-                />
-              </a>
-            </picture>
-          </div>
+              <img
+              src="img/vintagelife/user-flow@1x.png"
+              class="modal-target"
+              alt="User Flow Diagram"
+              />
+            </a>
+          </picture>
         </div>
-        <!--end of container/wrapper-->
+        <!-- end second column -->
+      </div>
+      <!-- end row for (2) columns -->
+    </div>
+    <!-- end container/wrapper -->
 
-        <!--open container/wrapper-->
-        <div class="container">
+
+  <!-- Low to mid wireframes -->
+  <!-- begin background -->
+  <div class="bg-black">
+    <!--open container/wrapper-->
+    <div class="container">
+      <!--open row for two columns-->
+      <div class="row">
+        <!--open first column-->
+        <div class="col-md-6 col-lg-5">
           <div>
             <h2>Low to Mid-Fidelity Wireframes</h2>
           </div>
-          <!--open row for two columns-->
-          <div class="row">
-            <!--open first column-->
-            <div class="col-md-6 col-lg-5">
-              <p>
-                I sketched the preliminary design ideas on paper before using
-                Figma to create mid-fidelity wireframes that could be quickly
-                prototyped for user testing.
-              </p>
-            </div>
-            <!--end first column-->
-            <!--open second column-->
-            <div class="col-md-6 col-lg-7">
-              <source
-                srcset="img/vintagelife/low-mid-wireframes@2x.jpg"
-                media="(max-width:767px)"
-              />
-              <img
-                src="img/vintagelife/low-mid-wireframes@1x.jpg"
-                alt="Low to Mid Wireframes"
-              />
-            </div>
-            <!--end second column-->
-          </div>
-          <!--end row for (2) columns-->
+          <p>
+            I sketched the preliminary design ideas on paper before using
+            Figma to create mid-fidelity wireframes that could be quickly
+            prototyped for user testing.
+          </p>
         </div>
-        <!--end of container/wrapper-->
+        <!--end first column-->
+        <!--open second column-->
+        <div class="col-md-6 col-lg-7">
+          <source
+          srcset="img/vintagelife/low-mid-wireframes@2x.jpg"
+          media="(max-width:767px)"
+          />
+          <img
+          src="img/vintagelife/low-mid-wireframes@1x.jpg"
+          class="modal-target"
+          alt="Low to Mid Wireframes"
+          />
+        </div>
+        <!--end second column-->
+      </div>
+      <!--end row for (2) columns-->
+    </div>
+    <!--end of container/wrapper-->
+  </div>
+<!-- end background -->
 
-        <!--open container/wrapper-->
-        <div class="container">
-          <div>
-            <h2>User Testing</h2>
-            <p>
-              Usability testing was conducted remotely over Skype and Zoom with
-              users ranging from the age of 26 to 33. Users were asked to
-              accomplish 2 tasks:
-            </p>
-          </div>
-          <!-- open row for two columns -->
-          <div class="row">
-            <!--open first column-->
-            <div class="col-md-6">
-              <p>
-                “Imagine you have just installed Vintage Life, you want to
-                browse the selection to see if there is anything you might want
-                to buy before creating an account. Add some items to your
-                wishlist before creating an account”.
-              </p>
+<!-- User testing -->
+<!--open container/wrapper-->
+<div class="container">
+  <!-- open row for two columns -->
+  <div class="row" style="margin-bottom:0;">
+    <!--open first column-->
+    <div class="col-md-6">
+      <h2>User Testing</h2>
+      <p>
+        Usability testing was conducted remotely over Skype and Zoom with
+        users ranging from the age of 26 to 33. Users were asked to
+        accomplish 2 tasks:
+      </p>
+    </div>
+    <!--end first column-->
+    <!--open second column-->
+    <div class="col-md-6">
+      <p class="quote">
+        “Imagine you have just installed Vintage Life, you want to
+        browse the selection to see if there is anything you might want
+        to buy before creating an account. Add some items to your
+        wishlist before creating an account”.
+      </p>
+      <p class="quote">
+        “Imagine you were using the app earlier today and added several
+        items to your cart that you are now ready to buy. Starting from
+        the home screen, find your bag and check out.”
+      </p>
+    </div>
+    <!--end second column-->
+  </div>
+  <!-- end row for (2) columns -->
+</div>
+<!--end of container/wrapper-->
+
+<!-- Feedback -->
+<!--open container/wrapper-->
+<div class="container">
+  <!--open row for two columns-->
+  <div class="row" style="margin-top: 0;">
+    <!--open first column-->
+    <div class="col-md-6 col-lg-5">
+      <h3>Positive Feedback</h3>
+      <ul>
+        <li>Easy navigation</li>
+        <li>Intuitive tab bar</li>
+        <li>No pain points when completing tasks</li>
+      </ul>
+    </div>
+    <!--end first column-->
+    <!--open second column-->
+    <div class="col-md-6 col-lg-7">
+      <h3>Constructive Feedback</h3>
+      <ul>
+        <li>
+          The bag icon in the tab bar was not showing how many items
+          were in the bag
+        </li>
+        <li>
+          Placeholders were missing on the checkout screen for date of
+          birth
+        </li>
+        <li>Item page had a lot of unused space above the picture</li>
+        <li>
+          Inconsistent language (ex: both "sign in" and "log in" were
+          used on different screens
+        </li>
+      </ul>
+    </div>
+    <!-- end second column-->
+    <!-- open double column section -->
+    <div>
+      <p>
+        All users succesfully completed the tasks, constructive feedback
+        was given regarding some oversights that could hinder usability.
+        Usability testing was fruitful in identifying minor design flaws
+        that were quickly resolved. Feedback was otherwise very positive
+        and no major setbacks were identified.
+      </p>
+    </div>
+    <!-- end double column section -->
+  </div>
+  <!-- end row for (2) columns -->
+  </div>
+  <!--end of container/wrapper-->
+  
+  <!-- Colors -->
+  <!--begin background  -->
+  <div class="bg-black">
+    <!--open container/wrapper-->
+    <div class="container">
+      <!--open row for two columns-->
+      <div class="row">
+        <!--open first column-->
+        <div class="col-md-6">
+          <h2>Colors</h2>
+          <p>
+            The brand color is a cobalt green. Green is universally linked
+            with nature, representing growth and renewal which are all
+            relevant associations for second hand shopping (i.e. more
+            sustainable e-commerce). The cool cobalt saturation is both
+            soothing and peaceful.
+          </p>
+          <p>
+            Black and white are the other two dominant colors. The secondary
+            green is a lighter shade of the primary one keeping the palette
+          limited to three colors (considering the secondary grey as an
+          intermediary color). The result is a very clean and bright
+          interface that is inviting in its simplicity as well as
+          conveying transparency and trustworthiness.
+        </p>
+      </div>
+      <!--end first column-->
+      <!--open second column-->
+      <div class="col-md-6">
+        <source
+        srcset="img/vintagelife/colors@2x.png"
+        media="(max-width:767px)"
+        />
+        <img src="img/vintagelife/colors@1x.png" 
+        class="modal-target"
+        alt="Color Scheme" />
+      </div>
+      <!--end second column-->
+    </div>
+    <!-- end row -->
+  </div>
+  <!--end of container/wrapper-->
+</div>
+<!-- end background -->
+
+<!-- Logo -->
+<!--open container/wrapper-->
+<div class="container">
+  <!--open row for two columns-->
+  <div class="row">
+    <!--open first column-->
+    <div class="col-md-6 col-lg-5">
+      <div>
+        <h2>Logo</h2>
+      </div>
+      <p>
+        The logo is the intersection of the first two letters of Vintage
+        Life. The design is inspired by the Bauhaus approach to design
+        where forms of expression are derived from function and dispense
+        of the superfluous.
+      </p>
+      <p>
+        The flat and minimalist design evokes simplicity and a certain
+        timelessness. The latter association is particularly coherent
+        for vintage clothing that can find new life beyond the
+        restrictive considerations of fast fashion.
+      </p>
+      <p>
+        The logotype was created with the Futura-Bold font. The “L” in
+        “Life” has been slightly modified at the base to suggest a
+        continuous line with the “V” of Vintage” that runs parallel to
+        the right hand side of the logo.
+      </p>
+      <p>
+        The colors used are the same three primary ones used for the
+        app.
+      </p>
+      <p>
+        The logo can be used on its own when space is limited. The
+        logotype should always be used with the logo and on the right as
+        shown.
+      </p>
+    </div>
+    <!--end first column-->
+    <!--open second column-->
+    <div class="col-md-6 col-lg-7">
+              <img src="img/vintagelife/logo-group.svg" alt="Vintage-life-logo-group" /> 
             </div>
-            <!--end first column-->
-            <!--open second column-->
-            <div class="col-md-6">
-              <p>
-                “Imagine you were using the app earlier today and added several
-                items to your cart that you are now ready to buy. Starting from
-                the home screen, find your bag and check out.”
-              </p>
-            </div>
-            <!--end second column-->
           </div>
           <!-- end row for (2) columns -->
         </div>
         <!--end of container/wrapper-->
-
-        <!--open container/wrapper-->
-        <div class="container">
-          <!--open row for two columns-->
-          <div class="row">
-            <!--open first column-->
-            <div class="col-md-6">
-              <h3>Positive Feedback</h3>
-              <ul>
-                <li>Easy navigation</li>
-                <li>Intuitive tab bar</li>
-                <li>No pain points when completing tasks</li>
-              </ul>
-            </div>
-            <!--end first column-->
-            <!--open second column-->
-            <div class="col-md-6">
-              <h3>Constructive Feedback</h3>
-              <ul>
-                <li>
-                  The bag icon in the tab bar was not showing how many items
-                  were in the bag
-                </li>
-                <li>
-                  Placeholders were missing on the checkout screen for date of
-                  birth
-                </li>
-                <li>Item page had a lot of unused space above the picture</li>
-                <li>
-                  Inconsistent language (ex: both "sign in" and "log in" were
-                  used on different screens
-                </li>
-              </ul>
-            </div>
-            <!-- end second column-->
-          </div>
-          <div>
-            <p>
-              All users succesfully completed the tasks, constructive feedback
-              was given regarding some oversights that could hinder usability.
-              Usability testing was fruitful in identifying minor design flaws
-              that were quickly resolved. Feedback was otherwise very positive
-              and no major setbacks were identified.
-            </p>
-          </div>
-        </div>
-        <!--end of container/wrapper-->
-
-        <!--open container/wrapper-->
-        <div class="container">
-          <div>
-            <h2>Colors</h2>
-          </div>
-          <!--open row for two columns-->
-          <div class="row">
-            <!--open first column-->
-            <div class="col-md-6">
+        
+        <!-- Typography -->
+        <!-- start background -->
+        <div class="bg-black">
+          <!--open container/wrapper-->
+          <div class="container">
+            <!-- open row -->
+            <div class="row">
+              <!--open first column-->
+              <div class="col-md-6 col-lg-5">
+                <h2>Typography</h2>
+                <p>
+                  The primary aim with the typography is to reinforce the functional
+                and minimalist design.
+              </p>
               <p>
-                The brand color is a cobalt green. Green is universally linked
-                with nature, representing growth and renewal which are all
-                relevant associations for second hand shopping (i.e. more
-                sustainable e-commerce). The cool cobalt saturation is both
-                soothing and peaceful.
+                Futura-Bold font makes for clean-looking headlines and text that
+                is easy to read. Designed by Paul Renner and released in 1927, it
+                was inspired by the concepts of Bauhaus.
+              </p>
+              <p>
+                Designed by the Dutch software developer Ralph Levien, Inconsolata
+                has clean lines that make it highly readable.
               </p>
             </div>
             <!--end first column-->
             <!--open second column-->
-            <div class="col-md-6">
-              <p>
-                Black and white are the other two dominant colors. The secondary
-                green is a lighter shade of the primary one keeping the palette
-                limited to three colors (considering the secondary grey as an
-                intermediary color). The result is a very clean and bright
-                interface that is inviting in its simplicity as well as
-                conveying transparency and trustworthiness.
-              </p>
-            </div>
-            <!--end second column-->
-          </div>
-          <div>
-            <source
-              srcset="img/vintagelife/colors@2x.png"
-              media="(max-width:767px)"
-            />
-            <img src="img/vintagelife/colors@1x.png" alt="Color Scheme" />
-          </div>
-        </div>
-        <!--end of container/wrapper-->
-
-        <!--open container/wrapper-->
-        <div class="container">
-          <!--open row for two columns-->
-          <div class="row">
-            <!--open first column-->
-            <div class="col-md-6">
-              <h2>Logo</h2>
-              <p>
-                The logo is the intersection of the first two letters of Vintage
-                Life. The design is inspired by the Bauhaus approach to design
-                where forms of expression are derived from function and dispense
-                of the superfluous.
-              </p>
-              <p>
-                The flat and minimalist design evokes simplicity and a certain
-                timelessness. The latter association is particularly coherent
-                for vintage clothing that can find new life beyond the
-                restrictive considerations of fast fashion.
-              </p>
-              <p>
-                The logotype was created with the Futura-Bold font. The “L” in
-                “Life” has been slightly modified at the base to suggest a
-                continuous line with the “V” of Vintage” that runs parallel to
-                the right hand side of the logo.
-              </p>
-              <p>
-                The colors used are the same three primary ones used for the
-                app.
-              </p>
-              <p>
-                The logo can be used on its own when space is limited. The
-                logotype should always be used with the logo and on the right as
-                shown.
-              </p>
-            </div>
-            <!--end first column-->
-            <!--open second column-->
-            <div>
+            <div class="col-md-5 col-lg-7" style="padding: 0 0;">
               <source
-                srcset="img/vintagelife/vintagelife-logo@2x.png"
-                media="(max-width:767px)"
-              />
-              <img
-                src="img/vintagelife/vintagelife-logo@1x.png"
-                alt="Logo Design"
-              />
-            </div>
-          </div>
-          <!-- end row for (2) columns -->
-        </div>
-        <!--end of container/wrapper-->
-
-        <!--open container/wrapper-->
-        <div>
-          <!--open first column-->
-          <div>
-            <h2>Typography</h2>
-            <p>
-              The primary aim with the typography is to reinforce the functional
-              and minimalist design.
-            </p>
-            <p>
-              Futura-Bold font makes for clean-looking headlines and text that
-              is easy to read. Designed by Paul Renner and released in 1927, it
-              was inspired by the concepts of Bauhaus.
-            </p>
-            <p>
-              Designed by the Dutch software developer Ralph Levien, Inconsolata
-              has clean lines that make it highly readable.
-            </p>
-          </div>
-          <!--end first column-->
-          <!--open second column-->
-          <div>
-            <source
               srcset="img/vintagelife/typography@2x.png"
               media="(max-width:767px)"
-            />
-            <img src="img/vintagelife/typography@1x.png" alt="Typography" />
+              />
+              <img src="img/vintagelife/typography@1x.png" alt="Typography" />
+            </div>
+            <!--end of second column-->
           </div>
-          <!--end of second column-->
+          <!-- end row for (2) columns -->
         </div>
+        <!-- end container -->
+      </div>
+        <!-- end background  -->
 
         <!--mobile design-->
         <div class="container">
-          <div>
-            <h2>Final Mobile Design</h2>
-          </div>
-          <div>
-            <source
-              srcset="img/vintagelife/mobile-mockups-one@2x.jpg"
-              media="(max-width:767px)"
+          <div class="row">
+            <div>
+              <h2>Final Mobile Design</h2>
+            </div>
+            <div style="margin-bottom:32px;">
+              <source
+            srcset="img/vintagelife/mobile-mockups-one@2x.png"
+            media="(max-width:767px)"
             />
             <img
-              src="img/vintagelife/mobile-mockups-one@1x.jpg"
-              alt="Mobile Mockups Row One"
+            src="img/vintagelife/mobile-mockups-one@1x.png"
+            alt="Mobile Mockups Row One"
             />
           </div>
-          <div>
+          <div style="margin-top: 32px;">
             <source
-              srcset="img/vintagelife/mobile-mockups-two@2x.jpg"
-              media="(max-width:767px)"
+            srcset="img/vintagelife/mobile-mockups-two@2x.png"
+            media="(max-width:767px)"
             />
             <img
-              src="img/vintagelife/mobile-mockups-two@1x.jpg"
-              alt="Mobile Mockups Row Two"
+            src="img/vintagelife/mobile-mockups-two@1x.png"
+            alt="Mobile Mockups Row Two"
             />
           </div>
         </div>
-
+        </div>
+        
         <!--web responsive design-->
         <div class="container">
-          <div>
-            <h2>Web Responsive Design</h2>
-          </div>
-          <div>
-            <source
-              srcset="img/vintagelife/web-responsive-mockups@2x.jpg"
+          <div class="row">
+            <div>
+              <h2>Web Responsive Design</h2>
+            </div>
+            <div>
+              <source
+              srcset="img/vintagelife/web-responsive-mockups@2x.png"
               media="(max-width:767px)"
-            />
-            <img
-              src="img/vintagelife/web-responsive-mockups@1x.jpg"
+              />
+              <img
+              src="img/vintagelife/web-responsive-mockups@1x.png"
               alt="Web Responsive Mockups"
-            />
+              />
+            </div>
           </div>
         </div>
-
+        
         <!--landing page-->
         <div class="container">
-          <div>
-            <h2>Landing Page</h2>
-          </div>
-          <div>
-            <source
-              srcset="img/vintagelife/landing-page@2x.jpg"
+          <div class="row">
+              <h2>Landing Page</h2>
+            <div>
+              <source
+              srcset="img/vintagelife/landing-page@2x.png"
               media="(max-width:767px)"
-            />
-            <img src="img/vintagelife/landing-page@1x.jpg" alt="Landing Page" />
+              />
+              <img src="img/vintagelife/landing-page@1x.png" alt="Landing Page" />
+            </div>
           </div>
         </div>
-
+        
         <!--conclusion-->
         <!--open container/wrapper-->
         <div class="container">
-          <!--open first column-->
-          <div>
-            <h2>Conclusion</h2>
-          </div>
-          <div>
-            <h3>What went well?</h3>
-            <p>
-              Building a cohesive brand from the start really helped to keep the
-              design process all the way from low fidelity wireframes to the
-              final mockups rather smooth.
-            </p>
-            <p>
-              Having a clear intent and a full picture of where the design
-              should go helped each step iterate over the previous one with very
-              little redesign or back and forth.
-            </p>
-          </div>
-          <div>
-            <h3>What were the challenges?</h3>
-            <p>
-              Lack of focus was at times distracting. While waiting for
-              additional feedback after my usability test I decided to start
-              working on a web responsive version fo the app. Although not a
-              part of the originally intended deliverables.
-            </p>
-            <p>
-              I originally thought it would not take too much time and would be
-              a nice addition to the mobile version. The problem was that by the
-              time I got my feedback I was not quite finished and now had some
+          <div class="row">
+            <!--open first column-->
+            <div class="col-md-6 col-lg-5">
+              <h2>Conclusion</h2>
+              <div>
+                <h3>What went well?</h3>
+                <p>
+                  Building a cohesive brand from the start really helped to keep the
+                  design process all the way from low fidelity wireframes to the
+                  final mockups rather smooth.
+                </p>
+                <p>
+                  Having a clear intent and a full picture of where the design
+                should go helped each step iterate over the previous one with very
+                little redesign or back and forth.
+              </p>
+            </div>
+            <div>
+              <h3>What were the challenges?</h3>
+              <p>
+                Lack of focus was at times distracting. While waiting for
+                additional feedback after my usability test I decided to start
+                working on a web responsive version fo the app. Although not a
+                part of the originally intended deliverables.
+              </p>
+              <p>
+                I originally thought it would not take too much time and would be
+                a nice addition to the mobile version. The problem was that by the
+                time I got my feedback I was not quite finished and now had some
               additional screens to work on.
             </p>
             <p>
@@ -651,24 +659,44 @@
               lighting, etc.
             </p>
           </div>
+        </div>
           <!--end first column-->
-          <!--open second column-->
-          <div>
+          <!-- open second column -->
+          <div class="col-md-6 col-lg-7">
             <source
-              srcset="img/vintagelife/footer-mockup@2x.jpg"
-              media="(max-width:767px)"
+            srcset="img/vintagelife/footer-mockup@2x.jpg"
+            media="(max-width:767px)"
             />
             <img
-              src="img/vintagelife/footer-mockup@1x.jpg"
-              alt="Footer Mockup"
+            src="img/vintagelife/footer-mockup@1x.jpg"
+            alt="Footer Mockup"
             />
           </div>
+          <!-- end second column -->
         </div>
+        <!-- end row for (2) column -->
+        </div>
+        <!-- end container -->
+
+        
       </div>
       <!-- return to top -->
       <a href="javascript:" id="return-to-top"><i class="fas fa-chevron-up"></i></a>
-    </main>
+      
+      <!-- end section block -->
+    </div>
 
+    </main>
+    
+    
+    <!-- Image Modal -->
+    <div id="modal" class="modal">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <img id="modal-content" class="modal-content">
+      <div id="modal-caption" class="modal-caption"></div>
+    </div>
+
+  
     <!--footer-->
     <footer id="contact">
       <div class="container">

@@ -6,6 +6,7 @@ Primary Color (Grey): #E7E7E7;
 Secondary Color (Light Lavender): #AFB4DB;
 Secondary Color (Dark Lavender): #A6A5C4;
 Secondary Color (Grey Lavender): #4D5269;
+Secondary Color (Background Black): #292E33;
 
 Vintage life Colors:
 Primary Color (Cobalt Green): #60B49F;
@@ -30,6 +31,12 @@ body {
   line-height: 1.6;
   color: #12130f;
 }
+
+footer a {
+  color: #ffffff;
+  text-decoration: none; /* No underlining */
+}
+
 div {
   display: block;
 }
@@ -38,18 +45,9 @@ img {
   width: 100%;
 }
 
-a {
-  color: #ffffff;
-  text-decoration: none; /* No underlining */
-}
-
 a:hover {
   opacity: 0.5;
   text-decoration: underline; /* Underlining when hovering over a link */
-}
-
-a:active {
-  color: #4d5269;
 }
 
 .button {
@@ -67,12 +65,11 @@ a:active {
   background-color: #ddd;
   border: none;
   color: black;
-  padding: 10px 20px;
+  padding: 5px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 4px 2px;
-  cursor: pointer;
   border-radius: 8px;
 }
 
@@ -262,7 +259,7 @@ footer ul li {
 }
 
 .row {
-  padding: 32px 0;
+  margin: 32px 0;
 }
 
 .row-pb-0 {
@@ -283,7 +280,7 @@ footer ul li {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: rgb(166, 165, 196, 0.5);
+  background: #12130f;
   width: 50px;
   height: 50px;
   display: block;
@@ -314,11 +311,150 @@ footer ul li {
 }
 
 #return-to-top:hover {
-  background: #afb4db;
+  background: rgb(18, 19, 15, 0.5);
 }
 #return-to-top:hover i {
   color: #fff;
   top: 5px;
+}
+
+.bg-black {
+  padding: 16px 0;
+  background-color: #292e33;
+  color: #ffffff;
+}
+
+.h3-box {
+  background-color: #292e33;
+  color: #ffffff;
+  text-align: center;
+  padding: 8px 8px;
+}
+
+.text-box {
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 3px 10px 0 rgba(18, 19, 15, 0.25);
+}
+
+#section {
+  width: 500px;
+  height: 400px;
+  word-wrap: break-word;
+}
+
+.quote {
+  font-style: italic;
+  text-align: center;
+  font-weight: 300;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 20px;
+}
+
+.footer-image {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.right-bottom {
+  border: 1px solid black;
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+}
+
+/* Image Modal */
+
+.modal-target {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  opacity: 1 !important;
+  max-width: 1200px;
+}
+
+/* Caption of Modal Image */
+.modal-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  margin-top: 32px;
+}
+
+/* Add Animation */
+.modal-content,
+.modal-caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-atransform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* ==============================
@@ -382,7 +518,7 @@ Large devices (1024px or larger)
 
   [class*="col-"] {
     float: left;
-    padding: 20px;
+    padding: 20px 20px 20px 0;
   }
 
   [class*="col-"]:first-child {
