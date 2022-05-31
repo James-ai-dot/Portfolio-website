@@ -1,12 +1,11 @@
-/*
+/*A6A5C4
 Colors used:
 Primary Color (Black): #12130F;
 Primary Color (White): #FFFFFF;
-Primary Color (Grey): #E7E7E7;
+Primary Color (Grey): #B9BABE;
 Secondary Color (Light Lavender): #AFB4DB;
 Secondary Color (Dark Lavender): #A6A5C4;
 Secondary Color (Grey Lavender): #4D5269;
-Secondary Color (Background Black): #292E33;
 
 Vintage life Colors:
 Primary Color (Cobalt Green): #60B49F;
@@ -26,7 +25,7 @@ html {
 body {
   background-color: #ffffff;
   font-family: "Manrope", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.6;
   color: #12130f;
@@ -47,7 +46,7 @@ img {
 
 a:hover {
   opacity: 0.5;
-  text-decoration: underline; /* Underlining when hovering over a link */
+  text-decoration: underline;
 }
 
 .button {
@@ -59,6 +58,7 @@ a:hover {
   padding: 12px 24px;
   border-radius: 3px;
   transition: 0.2s opacity;
+  text-decoration: none;
 }
 
 .pill {
@@ -71,6 +71,11 @@ a:hover {
   display: inline-block;
   margin: 4px 2px;
   border-radius: 8px;
+}
+
+.cobalt {
+  background-color: #60b49f;
+  color: #ffffff;
 }
 
 .button:hover {
@@ -178,12 +183,13 @@ nav > ul {
 nav > ul > li > a {
   padding: 0 15px;
   font-weight: 700;
+  text-decoration: none;
   color: #ffffff;
 }
 
 nav > ul > li > a:hover {
   color: #afb4db;
-  text-decoration: none; /* No underlining */
+  text-decoration: none;
 }
 
 footer {
@@ -318,10 +324,9 @@ footer ul li {
   top: 5px;
 }
 
-.bg-black {
+.bg-gray {
   padding: 16px 0;
-  background-color: #292e33;
-  color: #ffffff;
+  background-color: rgb(185, 186, 190, 0.2);
 }
 
 .h3-box {
@@ -364,6 +369,29 @@ footer ul li {
   position: absolute;
   width: 50%;
   bottom: 0;
+}
+
+.footermock {
+  padding: 100px 0px 0px 180px !important;
+  height: 50%;
+}
+
+.footermock img,
+::-webkit-search-results-decoration {
+  float: right !important;
+}
+
+.iframe-container {
+  text-align: center;
+  width: 100%;
+}
+
+#parent {
+  height: 100%;
+}
+
+#child {
+  height: 50%;
 }
 
 /* Image Modal */
@@ -455,6 +483,160 @@ footer ul li {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Process model */
+
+.design-process-section .text-align-center {
+  line-height: 25px;
+  margin-bottom: 12px;
+}
+.design-process-content {
+  border: 1px solid #e9e9e9;
+  position: relative;
+  padding: 16px 34% 30px 30px;
+}
+.design-process-content img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  max-height: 100%;
+}
+.design-process-content h3 {
+  margin-bottom: 16px;
+}
+.design-process-content p {
+  line-height: 26px;
+  margin-bottom: 12px;
+}
+.process-model {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto 26px;
+  border: none;
+  z-index: 0;
+}
+.process-model li::after {
+  background: #e5e5e5 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 0 auto;
+  position: absolute;
+  right: -30px;
+  top: 33px;
+  width: 85%;
+  z-index: -1;
+}
+.process-model li.visited::after {
+  background: #57b87b;
+}
+.process-model li:last-child::after {
+  width: 0;
+}
+.process-model li {
+  display: inline-block;
+  width: 18%;
+  text-align: center;
+  float: none;
+}
+.nav-tabs.process-model > li.active > a,
+.nav-tabs.process-model > li.active > a:hover,
+.nav-tabs.process-model > li.active > a:focus,
+.process-model li a:hover,
+.process-model li a:focus {
+  border: none;
+  background: transparent;
+}
+.process-model li a {
+  padding: 0;
+  border: none;
+  color: #606060;
+}
+.process-model li.active,
+.process-model li.visited {
+  color: #57b87b;
+}
+.process-model li.active a,
+.process-model li.active a:hover,
+.process-model li.active a:focus,
+.process-model li.visited a,
+.process-model li.visited a:hover,
+.process-model li.visited a:focus {
+  color: #57b87b;
+}
+.process-model li.active p,
+.process-model li.visited p {
+  font-weight: 600;
+}
+.process-model li i {
+  display: block;
+  height: 68px;
+  width: 68px;
+  text-align: center;
+  margin: 0 auto;
+  background: #f5f6f7;
+  border: 2px solid #e5e5e5;
+  line-height: 65px;
+  font-size: 30px;
+  border-radius: 50%;
+}
+.process-model li.active i,
+.process-model li.visited i {
+  background: #fff;
+  border-color: #57b87b;
+}
+.process-model li p {
+  font-size: 14px;
+  margin-top: 11px;
+}
+.process-model.contact-us-tab li.visited a,
+.process-model.contact-us-tab li.visited p {
+  color: #606060 !important;
+  font-weight: normal;
+}
+.process-model.contact-us-tab li::after {
+  display: none;
+}
+.process-model.contact-us-tab li.visited i {
+  border-color: #e5e5e5;
+}
+
+@media screen and (max-width: 560px) {
+  .more-icon-preocess.process-model li span {
+    font-size: 23px;
+    height: 50px;
+    line-height: 46px;
+    width: 50px;
+  }
+  .more-icon-preocess.process-model li::after {
+    top: 24px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .process-model.more-icon-preocess li {
+    width: 16%;
+  }
+  .more-icon-preocess.process-model li span {
+    font-size: 16px;
+    height: 35px;
+    line-height: 32px;
+    width: 35px;
+  }
+  .more-icon-preocess.process-model li p {
+    font-size: 8px;
+  }
+  .more-icon-preocess.process-model li::after {
+    top: 18px;
+  }
+  .process-model.more-icon-preocess {
+    text-align: center;
+  }
 }
 
 /* ==============================
