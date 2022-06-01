@@ -78,6 +78,11 @@ a:hover {
   color: #ffffff;
 }
 
+.orange {
+  background-color: #fb5e14;
+  color: #ffffff;
+}
+
 .button:hover {
   opacity: 0.8;
   text-decoration: none;
@@ -251,6 +256,7 @@ footer ul li {
 
 .logo {
   max-width: 150px;
+  max-height: 200px;
   padding: 10px 0 10px 0;
 }
 
