@@ -47,7 +47,6 @@ img {
 a:hover {
   opacity: 0.8;
   text-decoration: underline;
-  transition: 0.2s opacity;
 }
 
 .button {
@@ -237,7 +236,7 @@ footer ul li {
 }
 
 .shadow {
-  box-shadow: 3px 3px 10px 0 rgba(18, 19, 15, 0.15);
+  box-shadow: 2px 2px 8px 0 rgba(18, 19, 15, 0.15);
 }
 
 #hero {
@@ -334,7 +333,7 @@ footer ul li {
 
 .bg-gray {
   padding: 16px 0;
-  background-color: rgb(185, 186, 190, 0.2);
+  background-color: rgb(185, 186, 190, 0.1);
 }
 
 .h3-box {
