@@ -2,16 +2,16 @@
 Colors used:
 Primary Color (Black): #12130F;
 Primary Color (White): #FFFFFF;
-Primary Color (Grey): #B9BABE;
+Primary Color (Gray): #B9BABE;
 Secondary Color (Light Lavender): #AFB4DB;
 Secondary Color (Dark Lavender): #A6A5C4;
-Secondary Color (Grey Lavender): #4D5269;
+Secondary Color (Gray Lavender): #4D5269;
 
 Vintage life Colors:
 Primary Color (Cobalt Green): #60B49F;
 Primary Color (Black): #242423;
 Secondary Color (Light Green): #BFE1D9;
-Secondary Color (Grey): #F6F6F6;
+Secondary Color (Gray): #F6F6F6;
 */
 
 * {
@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   font-family: "Manrope", sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -45,8 +45,9 @@ img {
 }
 
 a:hover {
-  opacity: 0.5;
+  opacity: 0.8;
   text-decoration: underline;
+  transition: 0.2s opacity;
 }
 
 .button {
@@ -55,7 +56,7 @@ a:hover {
   color: #ffffff;
   font-weight: 400;
   margin: 4px 4px 0px 0px;
-  padding: 12px 24px;
+  padding: 10px 30px;
   border-radius: 3px;
   transition: 0.2s opacity;
   text-decoration: none;
@@ -248,7 +249,7 @@ footer ul li {
 }
 
 #hero h1 {
-  color: #a6a5c4;
+  color: #afb4db;
 }
 
 #hero span {
