@@ -5,7 +5,6 @@ Primary Color (White): #FFFFFF;
 Primary Color (Gray): #B9BABE;
 Secondary Color (Light Lavender): #AFB4DB;
 Secondary Color (Dark Lavender): #A6A5C4;
-Secondary Color (Gray Lavender): #4D5269;
 
 Vintage life Colors:
 Primary Color (Cobalt Green): #60B49F;
@@ -36,7 +35,12 @@ footer a {
   text-decoration: none; /* No underlining */
 }
 
-div {
+footer a:hover {
+  color: #afb4db;
+  opacity: 1;
+}
+
+footer div {
   display: block;
 }
 
@@ -204,7 +208,7 @@ nav > ul > li > a:hover {
 }
 
 footer {
-  background-color: #a6a5c4;
+  background-color: #12130f;
   color: #ffffff;
   text-align: center;
   margin: 0 0;
@@ -264,6 +268,11 @@ footer ul li {
   max-width: 150px;
   max-height: 200px;
   padding: 10px 0 10px 0;
+}
+
+.footer-logo {
+  max-width: 100px;
+  padding-bottom: 32px;
 }
 
 #head .logo {
@@ -505,6 +514,14 @@ Large devices (1024px or larger)
   #head {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #contact .container {
+    padding: 100px 0 20px 0;
+  }
+
+  #copyright {
+    padding-top: 100px;
   }
 }
 
