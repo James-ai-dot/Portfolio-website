@@ -55,6 +55,7 @@ h2 {
 h3 {
   font-size: 1.3em;
   font-weight: 400;
+  margin: 0;
 }
 
 h4 {
@@ -133,9 +134,25 @@ footer ul li {
   margin: 32px;
 }
 
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
 .navtoggle,
 .navtoggle.responsive {
   position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  padding-right: 10;
+  top: 5px;
+  font-size: 20px;
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
 }
 
 .navtoggle.responsive nav {
@@ -146,22 +163,6 @@ footer ul li {
   display: block;
   padding: 10px 0;
   border-top: 1px solid rgb(231, 231, 231);
-}
-
-.navtoggle li .icon {
-  position: absolute;
-  right: 0;
-  padding-right: 0;
-  top: 5px;
-  font-size: 20px;
-}
-
-.navtoggle li:not(:last-child) {
-  display: none;
-}
-
-.navtoggle.responsive li:last-child {
-  padding: 0 0 10px;
 }
 
 /* Layout styling */
@@ -239,7 +240,7 @@ footer ul li {
 }
 
 .footer-logo {
-  max-width: 100px;
+  max-width: 8%;
   padding-bottom: 32px;
 }
 
@@ -255,10 +256,6 @@ footer ul li {
 
 .row {
   margin: 32px 0;
-}
-
-.row-pb-0 {
-  padding: 32px 0 0;
 }
 
 #work .row {
@@ -402,8 +399,26 @@ Medium devices (641px and larger)
     display: none;
   }
 
+  .navtoggle.responsive nav {
+    padding: 0;
+  }
+
+  .navtoggle.responsive li {
+    border-top: 1px solid transparent;
+    padding: 0;
+  }
+
   .col-md-6 {
     width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 0 20px;
+  }
+
+  .row-pb-0 {
+    padding: 32px 0 0 20px;
   }
 
   #about-page h3 {
@@ -430,14 +445,18 @@ Medium devices (641px and larger)
     gap: 20px;
   }
 
-  .footermock {
-    padding: 100px 0 0 180px !important;
-    height: 50%;
+  div.container4 {
+    height: 25em;
+    position: relative;
   }
 
-  .footermock img,
-  ::-webkit-search-results-decoration {
-    float: right !important;
+  div.container4 img {
+    padding: 0 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -457,28 +476,10 @@ Large devices (1024px or larger)
     width: 41.66%;
   }
 
-  [class*="col-"] {
-    float: left;
-    padding: 20px 20px 20px 0;
-  }
-
-  [class*="col-"]:first-child {
-    padding-right: 50px;
-  }
-
   .container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
-  }
-
-  .navtoggle.responsive nav {
-    padding: 0;
-  }
-
-  .navtoggle.responsive li {
-    border-top: 1px solid transparent;
     padding: 0;
   }
 
@@ -493,5 +494,15 @@ Large devices (1024px or larger)
 
   #copyright {
     padding-top: 100px;
+  }
+
+  .footermock {
+    padding: 100px 0 0 180px !important;
+    height: 50%;
+  }
+
+  .footermock img,
+  ::-webkit-search-results-decoration {
+    float: right !important;
   }
 }
