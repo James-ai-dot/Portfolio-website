@@ -2,7 +2,7 @@
 Colors used:
 Primary Color (Black): #12130F;
 Primary Color (White): #FFFFFF;
-Primary Color (Gray): #B9BABE;
+Secondary Color (Gray): #B9BABE;
 Secondary Color (Light Lavender): #AFB4DB;
 
 Vintage life Colors:
@@ -201,6 +201,11 @@ footer ul li {
   color: #fff;
 }
 
+.purple {
+  background-color: #805695;
+  color: #fff;
+}
+
 .orange {
   background-color: #fb5e14;
   color: #fff;
@@ -341,6 +346,10 @@ footer ul li {
 
 a:hover {
   opacity: 0.8;
+  text-decoration: underline;
+}
+
+footer a {
   text-decoration: underline;
 }
 
