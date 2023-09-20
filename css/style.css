@@ -1,18 +1,21 @@
-/* A6A5C4
-Colors used:
-Primary Color (Black): #12130F;
-Primary Color (White): #FFFFFF;
-Secondary Color (Gray): #B9BABE;
-Secondary Color (Light Lavender): #AFB4DB;
+:root {
+  /*========== Colors ==========*/
+  --purple-100: hsl(275, 100%, 96%);
+  --purple-200: hsl(275, 93%, 89%);
+  --purple-300: hsl(275, 97%, 77%);
+  --purple-400: hsl(275, 76%, 48%);
+  /* --purple-400: hsl(275, 75%, 58%); */
+  /* --purple-500: hsl(275, 76%, 48%); */
+  --purple-500: hsl(275, 79%, 39%);
+  /* --purple-600: hsl(275, 79%, 39%); */
+  --purple-700: hsl(275, 82%, 30%);
+  --purple-800: hsl(275, 82%, 22%);
+  --purple-900: hsl(275, 83%, 14%);
+  --white: #fafafa;
+  --black: #041404;
+}
 
-Vintage life Colors:
-Primary Color (Cobalt Green): #60B49F;
-Primary Color (Black): #242423;
-Secondary Color (Light Green): #BFE1D9;
-Secondary Color (Gray): #F6F6F6;
-*/
-
-@import "https://fonts.googleapis.com/css2?family=Manrope&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -23,13 +26,12 @@ html {
 }
 
 body {
-  background-color: #f5f5f5;
-  /* stylelint-disable-next-line font-family-name-quotes */
-  font-family: "Manrope", sans-serif;
+  background-color: var(--white);
+  font-family: "Mulish", sans-serif;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
-  color: #12130f;
+  color: var(--black);
 }
 
 /* Typography */
@@ -47,13 +49,14 @@ h1 {
 }
 
 h2 {
+  color: var(--purple-800);
   font-size: 1.5em;
   font-weight: 700;
 }
 
 h3 {
   font-size: 1.3em;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -71,12 +74,12 @@ h4 {
 /* Header and Main Navigation */
 
 header {
-  background-color: #12130f;
+  background-color: var(--white);
   padding: 6px 0;
   display: inline-block;
   width: 100%;
   position: fixed;
-  box-shadow: 0 3px 10px 0 rgb(18, 19, 15, 0.25);
+  box-shadow: 0 1px 10px 0 rgb(18, 19, 15, 0.1);
   z-index: 4;
 }
 
@@ -95,12 +98,12 @@ nav > ul > li > a {
   padding: 0 15px;
   font-weight: 700;
   text-decoration: none;
-  color: #fff;
+  color: var(--purple-800);
 }
 
 footer {
-  background-color: #12130f;
-  color: #fff;
+  background-color: var(--purple-900);
+  color: var(--white);
   text-align: center;
   padding: 20px 0;
   display: inline-block;
@@ -108,7 +111,7 @@ footer {
 }
 
 footer a {
-  color: #fff;
+  color: var(white);
   text-decoration: none;
 }
 
@@ -174,12 +177,12 @@ footer ul li {
 
 .button {
   display: inline-block;
-  background-color: #12130f;
+  background-color: var(--purple-500);
   color: #fff;
   font-weight: 400;
   margin: 4px 4px 0 0;
-  padding: 10px 30px;
-  border-radius: 3px;
+  padding: 10px 24px;
+  border-radius: 6px;
   transition: 0.2s opacity;
   text-decoration: none;
 }
@@ -222,15 +225,13 @@ footer ul li {
 }
 
 #hero {
-  background-color: #12130f;
-  color: #fff;
   text-align: center;
   padding: 48px 0;
   width: 100%;
 }
 
 #hero h1 {
-  color: #afb4db;
+  color: var(--purple-800);
 }
 
 #hero span {
@@ -244,7 +245,7 @@ footer ul li {
 }
 
 .footer-logo {
-  max-width: 8%;
+  max-width: 24%;
   padding-bottom: 32px;
 }
 
@@ -268,7 +269,9 @@ footer ul li {
 
 .bg-gray {
   padding: 16px 0;
-  background-color: rgb(185, 186, 190, 0.1);
+  background-color: var(--purple-100);
+  color: var(--purple-900);
+  /* background-color: rgb(185, 186, 190, 0.1); */
 }
 
 .h3-box {
@@ -294,7 +297,7 @@ footer ul li {
 .quote {
   font-style: italic;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 20px;
@@ -332,8 +335,8 @@ footer ul li {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #12130f;
-  color: #fff;
+  background: var(--purple-500);
+  color: var(--white);
   outline: none;
   cursor: pointer;
 }
@@ -354,7 +357,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #afb4db;
+  color: var(--purple-500);
   opacity: 1;
 }
 
@@ -365,7 +368,7 @@ footer a:hover {
 }
 
 nav > ul > li > a:hover {
-  color: #afb4db;
+  color: var(--purple-500);
   text-decoration: none;
   opacity: 1;
 }
@@ -376,7 +379,7 @@ nav > ul > li > a:hover {
 }
 
 .button:active {
-  color: #afb4db;
+  color: var(--purple-400);
 }
 
 /* ==============================
