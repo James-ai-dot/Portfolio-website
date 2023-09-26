@@ -1,6 +1,6 @@
 :root {
   /*========== Colors ==========*/
-  --purple-100: hsl(275, 100%, 96%);
+  --purple-100: hsl(275, 100%, 98%);
   --purple-200: hsl(275, 93%, 89%);
   --purple-300: hsl(275, 97%, 77%);
   --purple-400: hsl(275, 76%, 48%);
@@ -189,30 +189,16 @@ footer ul li {
 }
 
 .pill {
-  background-color: #ddd;
+  background-color: var(--purple-200);
+  font-size: 1rem;
   border: none;
-  color: black;
+  color: var(--purple-900);
   padding: 0.3125rem 1rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 4px 2px;
-  border-radius: 8px;
-}
-
-.cobalt {
-  background-color: #60b49f;
-  color: #fff;
-}
-
-.purple {
-  background-color: #805695;
-  color: #fff;
-}
-
-.orange {
-  background-color: #fb5e14;
-  color: #fff;
+  border-radius: 32px;
 }
 
 .container {
@@ -239,12 +225,6 @@ footer ul li {
   display: block;
 }
 
-/* .logo {
-  max-width: 150px;
-  max-height: 200px;
-  padding: 10px 0;
-} */
-
 .footer-logo {
   max-width: 24%;
   padding-bottom: 32px;
@@ -269,7 +249,6 @@ footer ul li {
   padding: 1rem 0;
   background-color: var(--purple-100);
   color: var(--purple-900);
-  /* background-color: rgb(185, 186, 190, 0.1); */
 }
 
 .h3-box {
@@ -312,10 +291,6 @@ footer ul li {
   position: absolute;
   width: 50%;
   bottom: 0;
-}
-
-.iframe-container {
-  text-align: center;
 }
 
 #parent {
