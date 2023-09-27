@@ -53,13 +53,19 @@
       <div class="container">
         <div class="navtoggle" id="myNavtoggle">
           <a href="index.html">
-            <img class="logo" src="img/name-logo.svg" alt="James_David logo" />
+            <img
+              id="header-logo"
+              src="img/name-logo.svg"
+              alt="James_David logo"
+            />
           </a>
           <nav>
             <ul>
               <li><a href="index.html">Work</a></li>
               <li><a href="about.html">About</a></li>
-              <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+              <li>
+                <a href="#contact" onclick="menuToggle()">Contact</a>
+              </li>
               <li>
                 <a
                   href="javascript:void(0);"
@@ -79,7 +85,7 @@
     <main>
       <!-- About -->
       <!-- open container/wrapper -->
-      <div class="container">
+      <div class="container" id="head">
         <!-- open row -->
         <div class="row">
           <h2>About</h2>
@@ -89,14 +95,9 @@
               <picture>
                 <source
                   srcset="img/profile_picture@2x.jpg"
-                  class="shadow"
                   media="(max-width:767px)"
                 />
-                <img
-                  src="img/profile_picture@1x.jpg"
-                  class="shadow"
-                  alt="profile picture"
-                />
+                <img src="img/profile_picture@1x.jpg" alt="profile picture" />
               </picture>
             </div>
             <!-- end first column -->
@@ -109,13 +110,7 @@
                 to have a positive impact in everything I do and highly value
                 cooperation to achieve the best result.
               </p>
-              <p>
-                Through my academic background in Human Sciences and
-                International Relations I have a strong foundation in both
-                qualitative and quantitative research methods. Career Foundry’s
-                training program taught me the key skills to succeed as a UI
-                designer.
-              </p>
+
               <p>
                 I am bilingual in English and French and can speak German,
                 Japanese and Spanish. Living in France, Japan, the Netherlands
@@ -142,7 +137,7 @@
       </div>
       <!-- end container -->
 
-      <div class="bg-gray">
+      <div class="bg-100">
         <div class="container">
           <div class="row">
             <h2>Skills and Tools</h2>
@@ -216,7 +211,7 @@
         </span>
       </div>
       <div id="copyright">
-        <p>© James David 2022</p>
+        <p>© James David 2023</p>
       </div>
     </footer>
 
