@@ -34,6 +34,27 @@ body {
   color: var(--black);
 }
 
+/* Scroll Animation */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-10%);
+  transition: all 1s ease-out;
+}
+
+.show {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+@media (prefers-reduced-animation) {
+  .hidden {
+    transition: none;
+  }
+}
+
 /* Typography */
 
 h1,
