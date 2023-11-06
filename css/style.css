@@ -245,7 +245,7 @@ footer ul li {
 }
 
 #hero span {
-  display: block;
+  color: var(--purple-500);
 }
 
 .footer-logo {
