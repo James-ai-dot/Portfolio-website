@@ -88,8 +88,8 @@
         <div class="container">
           <img class="avatar hidden" src="img/avatar.jpg" alt="Avatar" />
           <h1 class="hidden">
-            Hi, I’m James.
-            <span>A UX/UI designer based in Vienna, Austria.</span>
+            Hi, I’m <span>James.</span><br />
+            A UX/UI designer based in Vienna, Austria.
           </h1>
           <p class="hidden">
             Adaptive, analytical and creatively minded, I am a team player with
@@ -102,9 +102,48 @@
       <div id="work">
         <!--open container/wrapper-->
         <div class="container">
-          <div class="row-pb-0 hidden">
-            <h2>Recent work</h2>
-          </div>
+          <section class="row-pb-0">
+            <h2 class="hidden">Recent work</h2>
+          </section>
+
+          <!--Shpock-->
+          <section class="row">
+            <!-- open first column (used for image) -->
+            <div class="col-md-6 col-lg-7 hidden">
+              <a href="location.html">
+                <picture>
+                  <source
+                    srcset="img/shpock/shpock_cover@2x.jpg"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="img/shpock/shpock_cover@1x.jpg"
+                    class="shadow"
+                    alt="Location setting cover"
+                  />
+                </picture>
+              </a>
+              <!-- end first column -->
+            </div>
+            <!-- open second column -->
+            <div class="col-md-6 col-lg-5 hidden">
+              <h3>Location Setting (Shpock)</h3>
+              <p>
+                <span class="pill">Mobile</span>
+                <span class="pill">Web</span>
+                <span class="pill">UX</span>
+              </p>
+              <p>
+                New app and website feature for saving preferred locations to
+                streamline the listing and searching experience.
+              </p>
+              <!-- end paragraph -->
+              <a href="location.html" class="button">Read more</a
+              ><!-- button or link label -->
+            </div>
+            <!-- end second column -->
+          </section>
+          <!-- end row  -->
 
           <!--Vintage Life-->
           <section class="row">
@@ -119,7 +158,7 @@
                   <img
                     src="img/vintagelife/vintagelife_cover@1x.jpg"
                     class="shadow"
-                    alt="My Image"
+                    alt="Vintage Life cover"
                   />
                 </picture>
               </a>
