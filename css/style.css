@@ -12,7 +12,7 @@
   --black: #041404;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -24,7 +24,7 @@ html {
 
 body {
   background-color: var(--white);
-  font-family: "Mulish", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.8;
@@ -71,21 +71,24 @@ h1 {
 
 h2 {
   color: var(--purple-800);
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.6em;
   font-weight: 500;
   margin: 0;
 }
 
 h4 {
-  font-size: 1em;
-  font-weight: 400;
-  text-transform: uppercase;
-  opacity: 0.5;
+  color: var(--purple-900);
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.3em;
 }
 
 .text-align {
@@ -118,13 +121,13 @@ nav > ul {
 
 nav > ul > li > a {
   padding: 0 1rem;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
   color: var(--purple-800);
 }
 
 footer {
-  background-color: var(--purple-900);
+  background: linear-gradient(hsla(275, 83%, 30%, 1), hsla(275, 83%, 22%, 1));
   color: var(--white);
   text-align: center;
   padding: 1.25rem 0;
@@ -201,7 +204,7 @@ footer ul li {
   display: inline-block;
   background-color: var(--purple-500);
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0.25rem 0.25rem 0 0;
   padding: 0.625rem 1.5rem;
   border-radius: 6px;
@@ -243,7 +246,23 @@ footer ul li {
 }
 
 #hero span {
+  /* Fallback color */
   color: var(--purple-500);
+
+  /* Gradient background */
+  background: linear-gradient(
+    to right,
+    hsla(275, 79%, 39%, 1),
+    hsla(275, 76%, 48%, 1)
+  );
+
+  /* Apply the gradient to the text (for browsers that support this feature) */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Make the text color transparent to reveal the gradient */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback: on browsers that don't support gradient text */
 }
 
 .footer-logo {
@@ -479,8 +498,29 @@ Medium devices (641px and larger)
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
-  main {
+  /* main {
     padding-top: 100px;
+  } */
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  h2 {
+    font-size: 2.75em;
+  }
+
+  h3 {
+    font-size: 2.25em;
+  }
+
+  h4 {
+    font-size: 1.75em;
+  }
+
+  h5 {
+    font-size: 1.5em;
+    font-weight: 400;
   }
 
   .col-lg-7 {
