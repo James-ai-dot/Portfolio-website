@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <script
@@ -91,8 +91,8 @@
           <!--open row for (2) colums-->
           <section class="row">
             <!--open first column-->
-            <div class="col-md-6 hidden">
-              <h1>Location Setting (Shpock)</h1>
+            <div class="col-md-6">
+              <h2>Location Setting (Shpock)</h2>
               <p>
                 Part of a major update of the mobile and web secondhand
                 marketplace Shpock's location settings. This update was
@@ -103,22 +103,25 @@
               <p>
                 Designed user flows, low fidelity wireframes and mockups of
                 several overhauls to onboarding, listings and searching.
-                Designed from the ground up (both UX and UI)
+                Designed from the ground up.
               </p>
-              <h4>responsibilities</h4>
+              <h5>Responsibilities:</h5>
               <p>UX Research, UX Design, UI Design</p>
               <!-- <a href="" class="button" target="_blank">Show prototype</a> -->
             </div>
             <!--end first column-->
             <!--open second column-->
-            <div class="col-md-6 hidden">
-              <picture>
-                <source
-                  srcset="img/shpock/header@2x.png"
-                  media="(max-width:767px)"
-                />
-                <img src="img/shpock/header@1x.png" alt="Shpock mockup" />
-              </picture>
+            <div class="col-md-6" id="spline-embed">
+              <div class="spline-embed-container">
+                <script
+                  type="module"
+                  src="https://unpkg.com/@splinetool/viewer@1.0.30/build/spline-viewer.js"
+                ></script>
+                <spline-viewer
+                  loading-anim-type="spinner-big-dark"
+                  url="https://prod.spline.design/moaTI3GvTCLwX9VL/scene.splinecode"
+                ></spline-viewer>
+              </div>
               <!--end of second column-->
             </div>
             <!--end row for (2 columns)-->
@@ -132,7 +135,7 @@
           <div class="container">
             <!-- open row -->
             <div class="row">
-              <h2>Project Planning</h2>
+              <h3>Project Planning</h3>
               <!-- open first column -->
               <div class="col-md-6">
                 <p>
@@ -142,7 +145,7 @@
                   difficulties in changing locations, problems with address
                   recognition, and the necessity of sharing exact addresses.
                 </p>
-                <h3>Design Process</h3>
+                <h4>Design Process</h4>
                 <p>
                   Our team undertook a holistic approach to reimagine the
                   location settings. The process included:
@@ -165,7 +168,7 @@
               <!-- end first column -->
               <!-- open second column -->
               <div class="col-md-6">
-                <h3>Key Features</h3>
+                <h4>Key Features</h4>
                 <ul>
                   <li>
                     <b>Onboarding:</b>Users now have the option to share their
@@ -198,8 +201,8 @@
         <!--mobile design-->
         <div class="container">
           <div class="row">
-            <h2 class="text-align">Final Designs</h2>
-            <h3 class="text-align">Onboarding</h3>
+            <h3 class="text-align">Final Designs</h3>
+            <h4 class="text-align">Onboarding</h4>
             <div>
               <picture>
                 <source
@@ -212,7 +215,7 @@
                 />
               </picture>
             </div>
-            <h3 class="text-align">Saved locations</h3>
+            <h4 class="text-align">Saved locations</h4>
             <div>
               <picture>
                 <source
@@ -237,7 +240,7 @@
                 />
               </picture>
             </div>
-            <h3 class="text-align">Searching</h3>
+            <h4 class="text-align">Searching</h4>
             <div>
               <picture>
                 <source
@@ -270,9 +273,9 @@
           <!--open container/wrapper-->
           <div class="container">
             <div class="row">
-              <h2>Conclusion</h2>
+              <h3>Final Thoughts</h3>
               <!--open first column-->
-              <div class="col-md-6 col-lg-5">
+              <div class="col-md-6">
                 <p>
                   The implementation of these features addressed the pain points
                   identified in user reviews and competitor benchmarks. The new
@@ -291,7 +294,7 @@
               </div>
               <!--end first column-->
               <!-- open second column -->
-              <div class="col-md-6 col-lg-7">
+              <div class="col-md-6">
                 <p>
                   The comprehensive redesign of Shpock's location settings in
                   marks a pivotal improvement in user experience. By
@@ -318,42 +321,26 @@
 
     <!--footer-->
     <footer id="contact">
-      <div class="container">
+      <div class="footer-content">
         <img
           class="footer-logo"
           src="img/footer-logo.svg"
           alt="James_David logo"
         />
-        <div>
-          <h3>Email me:</h3>
-          <a href="mailto:contact@jamesdavid.eu">contact[a]jamesdavid.eu</a>
-        </div>
-      </div>
-      <div>
+        <p id="email">
+          Email: <a href="javascript:void(0);" id="email-link">Click to view</a>
+        </p>
+
         <!--Social Media Layout and Placeholders-->
         <!--Linkedin-->
-        <span class="fa-stack fa-2x">
-          <a
-            href="https://www.linkedin.com/in/jamesdavidturrell/"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i class="fa-brands fa-linkedin"></i>
+        <div class="social-media">
+          <a href="#" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
           </a>
-        </span>
-        <!--Behance-->
-        <span class="fa-stack fa-2x">
-          <a
-            href="https://www.behance.net/jamesdavidturrell"
-            target="_blank"
-            aria-label="Behance"
-          >
-            <i class="fa-brands fa-behance-square"></i>
-          </a>
-        </span>
+        </div>
       </div>
       <div id="copyright">
-        <p>© James David 2023</p>
+        <sup>© James David 2024</sup>
       </div>
     </footer>
 

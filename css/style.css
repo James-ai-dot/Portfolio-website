@@ -1,6 +1,6 @@
 :root {
   /*========== Colors ==========*/
-  --purple-100: hsl(275, 95%, 98%);
+  --purple-100: hsl(275, 97%, 99%);
   --purple-200: hsl(275, 90%, 95%);
   --purple-300: hsl(275, 97%, 77%);
   --purple-400: hsl(275, 76%, 48%);
@@ -12,7 +12,7 @@
   --black: #041404;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -24,7 +24,7 @@ html {
 
 body {
   background-color: var(--white);
-  font-family: "Mulish", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.8;
@@ -35,7 +35,7 @@ body {
 
 .hidden {
   opacity: 0;
-  filter: blur(2px);
+  filter: blur(1px);
   transform: translateX(-10%);
   transition: all 1s ease-out;
   transition-delay: var(--stagger-delay, 0s);
@@ -70,22 +70,29 @@ h1 {
 }
 
 h2 {
-  color: var(--purple-800);
-  font-size: 1.5em;
+  color: var(--purple-900);
+  font-size: 1.8em;
   font-weight: 700;
+  margin: 0 0 2rem 0;
 }
 
 h3 {
-  font-size: 1.3em;
-  font-weight: 500;
-  margin: 0;
+  font-size: 1.6em;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
 }
 
 h4 {
-  font-size: 1em;
-  font-weight: 400;
-  text-transform: uppercase;
-  opacity: 0.5;
+  color: var(--purple-900);
+  font-size: 1.4em;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+
+h5 {
+  color: var(--purple-900);
+  font-size: 1.3em;
+  margin: 0 0 1rem 0;
 }
 
 .text-align {
@@ -98,11 +105,15 @@ h4 {
 header {
   background-color: var(--white);
   padding: 0.5rem 0;
-  display: inline-block;
+  display: block;
   width: 100%;
   position: fixed;
-  box-shadow: 0 1px 10px 0 rgb(18, 19, 15, 0.1);
   z-index: 4;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+header.scrolled {
+  box-shadow: 4px 4px 16px hsla(0, 0%, 82%, 0.5);
 }
 
 main {
@@ -118,18 +129,41 @@ nav > ul {
 
 nav > ul > li > a {
   padding: 0 1rem;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
   color: var(--purple-800);
 }
 
 footer {
-  background-color: var(--purple-900);
+  background: linear-gradient(hsla(275, 83%, 30%, 1), hsla(275, 83%, 22%, 1));
   color: var(--white);
   text-align: center;
   padding: 1.25rem 0;
+}
+
+footer h4 {
+  color: var(--white);
+}
+
+.footer-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-icon {
   display: inline-block;
-  width: 100%;
+  margin: 0 10px;
+  color: white;
+  font-size: 1.3em;
+}
+
+.social-icon:hover {
+  color: var(--purple-300);
 }
 
 footer a {
@@ -199,9 +233,9 @@ footer ul li {
 
 .button {
   display: inline-block;
-  background-color: var(--purple-500);
+  background: var(--purple-500);
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0.25rem 0.25rem 0 0;
   padding: 0.625rem 1.5rem;
   border-radius: 6px;
@@ -229,7 +263,9 @@ footer ul li {
 }
 
 .shadow {
-  box-shadow: 2px 2px 8px 0 rgba(18, 19, 15, 0.15);
+  border-radius: 20px;
+  box-shadow: -6px -6px 16px hsla(0, 0%, 100%, 0.5),
+    4px 4px 16px hsla(0, 0%, 82%, 0.5);
 }
 
 #hero {
@@ -240,10 +276,20 @@ footer ul li {
 
 #hero h1 {
   color: var(--purple-800);
+  margin: 0 auto;
 }
 
 #hero span {
   color: var(--purple-500);
+  background: linear-gradient(
+    to right,
+    hsla(275, 79%, 39%, 1),
+    hsla(275, 76%, 48%, 1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback: on browsers that don't support gradient text */
 }
 
 .footer-logo {
@@ -376,6 +422,35 @@ nav > ul > li > a:hover {
   color: var(--purple-400);
 }
 
+/* Spline Viewer */
+
+/* Base styles for Spline embed */
+.spline-embed-container {
+  position: relative;
+  width: 100%;
+  /* Square aspect ratio for mobile */
+  padding-top: 100%;
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  /* Adjust '768px' based on your design's breakpoint */
+  .spline-embed-container {
+    /* Match the height of the left column on larger screens */
+    padding-top: 0;
+    height: 0; /* Set to 0 to be controlled by JavaScript */
+  }
+}
+
+spline-viewer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* To prevent content from overflowing the frame */
+}
+
 /* ==============================
 Medium devices (641px and larger)
 ================================= */
@@ -428,12 +503,16 @@ Medium devices (641px and larger)
     padding: 0 20px;
   }
 
+  .col-md-6:first-of-type {
+    padding-left: 0;
+  }
+
   #head .col-md-6 {
     padding-left: 0;
   }
 
   .row-pb-0 {
-    padding: 32px 0 0 20px;
+    margin-top: 2rem;
   }
 
   #about-page h3 {
@@ -479,8 +558,29 @@ Medium devices (641px and larger)
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
-  main {
+  /* main {
     padding-top: 100px;
+  } */
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  h2 {
+    font-size: 2.75em;
+  }
+
+  h3 {
+    font-size: 2.25em;
+  }
+
+  h4 {
+    font-size: 1.75em;
+  }
+
+  h5 {
+    font-size: 1.5em;
+    font-weight: 400;
   }
 
   .col-lg-7 {
@@ -508,16 +608,16 @@ Large devices (1024px or larger)
   }
 
   #copyright {
-    padding-top: 4rem;
+    padding-top: 2rem;
   }
 
-  .footermock {
-    padding: 100px 0 0 180px !important;
-    height: 50%;
+  .contact-form input[type="text"],
+  .contact-form input[type="email"] {
+    flex: 1 1 calc(50% - 10px); /* Subtract gap size to fit side by side */
   }
 
-  .footermock img,
-  ::-webkit-search-results-decoration {
-    float: right !important;
+  .contact-form button {
+    margin-left: auto; /* Aligns the button to the right */
+    align-self: flex-end;
   }
 }
