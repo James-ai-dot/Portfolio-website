@@ -11,18 +11,19 @@ const observer = new IntersectionObserver(
   { threshold: 0.3 }
 );
 
-let cumulativeDelay = 0; // To keep track of total delay
-
 function staggerShow(container) {
   const hiddenElements = container.querySelectorAll(".hidden");
   hiddenElements.forEach((el, index) => {
-    setTimeout(() => {
+    // Assign a stagger delay based on the element index,
+    // resulting in a sequence of animations
+    el.style.setProperty("--stagger-delay", `${index * 0.1}s`); // 100ms per element
+
+    // Add 'show' class to start the animation
+    requestAnimationFrame(() => {
       el.classList.add("show");
       el.classList.remove("hidden");
-    }, cumulativeDelay + index * 100);
+    });
   });
-
-  cumulativeDelay += hiddenElements.length * 100; // Increase delay for next section
 }
 
 sections.forEach((section) => {
