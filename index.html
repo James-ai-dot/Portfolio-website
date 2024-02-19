@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>James David</title>
-    <!--normalize css-->
+    <title>James David - UI/UX Design</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <!--style sheet-->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!--google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,282 +40,62 @@
       href="favicon_package_v0.16/safari-pinned-tab.svg"
       color="#5bbad5"
     />
-    <!--favicon-->
-    <script
-      src="https://kit.fontawesome.com/612a861015.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon_package_v0.16/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon_package_v0.16/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon_package_v0.16/favicon-16x16.png"
-    />
-    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="favicon_package_v0.16/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
   </head>
-
   <body>
-    <!--header-->
     <header>
-      <div class="container">
-        <div class="navtoggle" id="myNavtoggle">
-          <a href="index.html">
-            <img
-              id="header-logo"
-              src="img/name-logo.svg"
-              alt="James_David logo"
-            />
-          </a>
+      <div class="wrapper navbar">
+        <a href="#" class="logo">SomeComp</a>
+
+        <div class="nav-cart-wrapper">
           <nav>
+            <img src="assets/close.svg" class="close" alt="Close Menu" />
             <ul>
-              <li><a href="index.html">Work</a></li>
-              <li><a href="about.html">About</a></li>
-              <li>
-                <a href="#contact" onclick="menuToggle()">Contact</a>
-              </li>
-              <li>
-                <a
-                  href="javascript:void(0);"
-                  class="icon"
-                  onclick="menuToggle()"
-                  aria-label="Dropdown menu"
-                  ><i class="fas fa-bars"></i
-                ></a>
-              </li>
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#">About</a></li>
             </ul>
           </nav>
+
+          <div class="mobile-cart-menu">
+            <a href="#" class="cart">
+              <svg
+                width="20"
+                height="19"
+                viewBox="0 0 20 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.53528 16.8889C8.19112 16.8889 8.72278 16.3572 8.72278 15.7014C8.72278 15.0455 8.19112 14.5139 7.53528 14.5139C6.87944 14.5139 6.34778 15.0455 6.34778 15.7014C6.34778 16.3572 6.87944 16.8889 7.53528 16.8889Z"
+                  fill="black"
+                />
+                <path
+                  d="M14.75 16.8889C15.4058 16.8889 15.9375 16.3572 15.9375 15.7014C15.9375 15.0455 15.4058 14.5139 14.75 14.5139C14.0942 14.5139 13.5625 15.0455 13.5625 15.7014C13.5625 16.3572 14.0942 16.8889 14.75 16.8889Z"
+                  fill="black"
+                />
+                <path
+                  d="M12.412 3.69444C12.3879 3.51953 12.3756 3.34322 12.375 3.16666C12.3756 2.99011 12.3879 2.81379 12.412 2.63889H6.56418L6.90723 3.69444H12.412Z"
+                  fill="black"
+                />
+                <path
+                  d="M16.3333 7.12501H16.1117L15.4519 10.0278H7.53526L5.12332 2.39084C5.09723 2.30981 5.05193 2.23629 4.99127 2.17655C4.93062 2.11681 4.85641 2.07264 4.77499 2.04779L2.6111 1.38279C2.54456 1.36234 2.47465 1.3552 2.40535 1.36177C2.33606 1.36835 2.26873 1.3885 2.20723 1.42109C2.08301 1.48691 1.99003 1.59938 1.94874 1.73376C1.90744 1.86814 1.92122 2.01341 1.98704 2.13763C2.05286 2.26185 2.16533 2.35483 2.29971 2.39612L4.19443 2.97668L6.61693 10.6295L5.75138 11.3367L5.68277 11.4053C5.46866 11.652 5.34731 11.9657 5.3396 12.2923C5.3319 12.6189 5.43832 12.9379 5.64054 13.1945C5.78439 13.3694 5.96719 13.5082 6.1743 13.5999C6.38142 13.6915 6.60711 13.7334 6.83332 13.7222H15.6419C15.7819 13.7222 15.9161 13.6666 16.0151 13.5676C16.1141 13.4687 16.1697 13.3344 16.1697 13.1945C16.1697 13.0545 16.1141 12.9202 16.0151 12.8213C15.9161 12.7223 15.7819 12.6667 15.6419 12.6667H6.74888C6.6881 12.6646 6.62889 12.6469 6.57696 12.6152C6.52503 12.5836 6.48213 12.5391 6.45242 12.486C6.42271 12.433 6.40718 12.3732 6.40734 12.3124C6.4075 12.2515 6.42333 12.1918 6.45332 12.1389L7.72527 11.0833H15.8742C15.9962 11.0863 16.1154 11.0469 16.2116 10.9719C16.3079 10.8968 16.3751 10.7907 16.4019 10.6717L17.2305 7.02473C16.9363 7.09222 16.6352 7.12586 16.3333 7.12501Z"
+                  fill="black"
+                />
+                <path
+                  d="M16.3333 5.80555C17.7908 5.80555 18.9722 4.62408 18.9722 3.16666C18.9722 1.70924 17.7908 0.527771 16.3333 0.527771C14.8759 0.527771 13.6945 1.70924 13.6945 3.16666C13.6945 4.62408 14.8759 5.80555 16.3333 5.80555Z"
+                  fill="black"
+                />
+              </svg>
+
+              <p>Contact</p>
+            </a>
+
+            <img src="assets/menu.svg" class="menu-btn" alt="Open Menu" />
+          </div>
         </div>
       </div>
     </header>
-
-    <!--open main-->
-    <main>
-      <!--hero section-->
-      <section id="hero" class="container">
-        <h1 class="hidden">
-          Hi, I’m <span>James</span><br />
-          UX/UI designer
-        </h1>
-      </section>
-
-      <!--work/projects-->
-      <div id="work">
-        <!--open container/wrapper-->
-        <div class="container">
-          <section class="row-pb-0">
-            <h2 class="hidden">Recent work</h2>
-          </section>
-
-          <!--Shpock-->
-          <section class="row">
-            <!-- open first column (used for image) -->
-            <div class="col-md-6 col-lg-7 hidden">
-              <a href="location.html">
-                <picture>
-                  <source
-                    srcset="img/shpock/shpock_cover@2x.jpg"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="img/shpock/shpock_cover@1x.jpg"
-                    class="shadow"
-                    alt="Location setting cover"
-                  />
-                </picture>
-              </a>
-              <!-- end first column -->
-            </div>
-            <!-- open second column -->
-            <div class="col-md-6 col-lg-5 hidden">
-              <h4>Location Setting (Shpock)</h4>
-              <p>
-                <span class="pill">Mobile</span>
-                <span class="pill">Web</span>
-                <span class="pill">UX</span>
-              </p>
-              <p>
-                New app and website feature for saving preferred locations to
-                streamline the listing and searching experience.
-              </p>
-              <!-- end paragraph -->
-              <a href="location.html" class="button">Read more</a
-              ><!-- button or link label -->
-            </div>
-            <!-- end second column -->
-          </section>
-          <!-- end row  -->
-
-          <!--Vintage Life-->
-          <section class="row">
-            <!-- open first column (used for image) -->
-            <div class="col-md-6 col-lg-7 hidden">
-              <a href="vintage-life.html">
-                <picture>
-                  <source
-                    srcset="img/vintagelife/vintagelife_cover@2x.jpg"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="img/vintagelife/vintagelife_cover@1x.jpg"
-                    class="shadow"
-                    alt="Vintage Life cover"
-                  />
-                </picture>
-              </a>
-              <!-- end first column -->
-            </div>
-            <!-- open second column -->
-            <div class="col-md-6 col-lg-5 hidden">
-              <h4>Vintage Life</h4>
-              <p>
-                <span class="pill">Mobile</span>
-                <span class="pill">Responsive</span>
-                <span class="pill">iOS</span>
-              </p>
-              <p>
-                A user friendly and convenient online store for users to find
-                and buy vintage clothing online. Users can browse and buy
-                apparel, save items for later and create an account for a
-                quicker checkout.
-              </p>
-              <!-- end paragraph -->
-              <a href="vintage-life.html" class="button">Read more</a
-              ><!-- button or link label -->
-            </div>
-            <!-- end second column -->
-          </section>
-          <!-- end row  -->
-
-          <!--Onestop Club-->
-          <!-- <section class="row">
-            <div class="col-md-6 col-lg-7 hidden">
-              <a href="onestop-club.html">
-                <picture>
-                  <source
-                    srcset="img/onestop/onestopclub_cover@2x.jpg"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="img/onestop/onestopclub_cover@1x.jpg"
-                    class="shadow"
-                    alt="OneStopclub cover"
-                  />
-                </picture>
-              </a>
-            </div>
-            <div class="col-md-6 col-lg-5 hidden">
-              <h4>Onestop Club</h4>
-              <p>
-                <span class="pill">Mobile</span>
-                <span class="pill">iOS</span>
-                <span class="pill">Android</span>
-              </p>
-              <p>
-                Onestop Club serves as a hub for finding dance events from
-                various sources in one handy app. Users can find and save
-                events, add them to their phone calendar, as well as look up
-                artists and promoters.
-              </p>
-              <a href="onestop-club.html" class="button">Read more</a
-              >
-            </div>
-          </section> -->
-
-          <!--Rewind-->
-          <section class="row">
-            <!-- open row that holds (2) columns for project -->
-            <div class="col-md-6 col-lg-7 hidden">
-              <!-- open first column (used for image) -->
-              <a href="rewind.html">
-                <picture>
-                  <source
-                    srcset="img/rewind/rewind_cover@2x.jpg"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="img/rewind/rewind_cover@1x.jpg"
-                    class="shadow"
-                    alt="OneStopclub cover"
-                  />
-                </picture>
-              </a>
-            </div>
-            <!-- end first column -->
-            <!-- open second column (used for text) -->
-            <div class="col-md-6 col-lg-5 hidden">
-              <h4>Rewind</h4>
-              <p>
-                <span class="pill">Mobile</span>
-                <span class="pill">iOS</span>
-              </p>
-              <p>
-                <!-- open paragraph -->
-                Rewind is a Music Player app where users can listen to their
-                favorite 80s music songs, create a profile and playlists, sing
-                along with scrolling lyrics. use socials and an advanced search
-                function.
-              </p>
-              <a href="rewind.html" class="button">Read more</a
-              ><!-- button or link label -->
-            </div>
-            <!-- end second column -->
-          </section>
-          <!-- end row that holds (2) columns for project -->
-        </div>
-        <!-- end container/wrapper -->
-      </div>
-    </main>
-    <!--end main-->
-
-    <!--footer-->
-    <footer id="contact">
-      <div class="footer-content">
-        <img
-          class="footer-logo"
-          src="img/footer-logo.svg"
-          alt="James_David logo"
-        />
-        <p id="email">
-          Email: <a href="javascript:void(0);" id="email-link">Click to view</a>
-        </p>
-
-        <!--Social Media Layout and Placeholders-->
-        <!--Linkedin-->
-        <div class="social-media">
-          <a href="#" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
-      <div id="copyright">
-        <sup>© James David 2024</sup>
-      </div>
-    </footer>
-
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
     <script src="js/scripts.js"></script>
-    <script src="js/scroll.js"></script>
   </body>
 </html>

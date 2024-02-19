@@ -1,12 +1,11 @@
 // Mobile navigation
-function menuToggle() {
-  var x = document.getElementById("myNavtoggle");
-  if (x.className === "navtoggle") {
-    x.className += " responsive";
-  } else {
-    x.className = "navtoggle";
-  }
-}
+document.querySelector(".menu-btn").addEventListener("click", function () {
+  document.querySelector("nav").classList.toggle("open");
+});
+
+document.querySelector(".close").addEventListener("click", function () {
+  document.querySelector("nav").classList.toggle("open");
+});
 
 // Attempt to get the returnTop element
 var returnTop = document.getElementById("return-top");
