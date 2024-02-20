@@ -59,7 +59,7 @@
           </nav>
 
           <div class="mobile-menu">
-            <a href="#" class="button-1"> Contact </a>
+            <a href="#" class="button-1 dynamic-button"> Contact </a>
 
             <img src="assets/menu.svg" class="menu-btn" alt="Open Menu" />
           </div>
@@ -67,13 +67,13 @@
       </div>
     </header>
 
-    <main>
-      <section class="hero wrapper">
+    <main class="wrapper">
+      <section class="hero">
         <h1 class="hidden">Hi, I’m <span>James</span> UX/UI Designer</h1>
       </section>
 
-      <section class="work wrapper">
-        <h2>Recent Work</h2>
+      <h2>Recent Work</h2>
+      <section class="work">
         <div class="project hidden">
           <a href="location.html">
             <picture>
@@ -100,20 +100,20 @@
             New app and website feature for saving preferred locations to
             streamline the listing and searching experience.
           </p>
-          <a href="location.html" class="button-2">Read more</a>
+          <a href="location.html" class="button-2 dynamic-button">Read more</a>
         </div>
 
         <div class="project hidden">
           <a href="location.html">
-            <picture>
+            <picture  >
               <source
                 srcset="img/shpock/shpock_cover@2x.jpg"
                 media="(max-width:767px)"
               />
-              <img
+              <img 
                 src="img/shpock/shpock_cover@1x.jpg"
                 class="shadow"
-                alt="Location setting cover"
+                alt="Location setting case study"
               />
             </picture>
           </a>
@@ -135,16 +135,19 @@
     <footer id="contact">
       <div class="wrapper">
         <h2>Let's work together</h2>
-          <a href="javascript:void(0);" id="email-link" class="button-2">Click to view</a>
+          <a href="javascript:void(0);" id="email-link" class="button-2 dynamic-button">Click to view</a>
 
-        <!--Social Media Layout and Placeholders-->
-        <!--Linkedin-->
         <div class="social-media">
-          <a href="#" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
+          <a href="https://www.linkedin.com/in/jamesdavidturrell/" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <i class="fab fa-linkedin-in dynamic-button"></i>
           </a>
-        <sup>© James David 2024</sup>
-      </div>
+          <a href="" class="social-icon">
+            <i class="fa-brands fa-behance dynamic-button"></i>
+          </a>
+        </div>
+          <p>
+        <p>© Code by James David </p>
+      </p>
     </footer>
 
     <script src="js/scripts.js"></script>

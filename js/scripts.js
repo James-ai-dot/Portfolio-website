@@ -43,24 +43,23 @@ document.addEventListener("scroll", function () {
   }
 });
 
-// Spline frame
-window.addEventListener("resize", adjustSplineEmbed);
+// Dynamic button hover
+document.querySelectorAll(".dynamic-button").forEach((button) => {
+  // Apply a smooth transition to the transform property
+  button.style.transition = "transform 0.1s ease-out";
 
-function adjustSplineEmbed() {
-  var splineEmbedContainer = document.querySelector(".spline-embed-container");
-  if (window.innerWidth >= 768) {
-    /* Match with CSS media query breakpoint */
-    var leftColumnHeight = document.querySelector(
-      ".col-md-6:first-child"
-    ).offsetHeight;
-    splineEmbedContainer.style.height = leftColumnHeight + "px";
-    splineEmbedContainer.style.paddingTop = 0; // Remove padding-top for large screens
-  } else {
-    // Reset styles for mobile
-    splineEmbedContainer.style.height = "auto";
-    splineEmbedContainer.style.paddingTop = "100%"; // Maintain square aspect ratio
-  }
-}
+  button.addEventListener("mousemove", (e) => {
+    const rect = button.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
 
-// Initialize on load
-adjustSplineEmbed();
+    const translateX = x * 0.2;
+    const translateY = y * 0.2;
+
+    button.style.transform = `translate(${translateX}px, ${translateY}px)`;
+  });
+
+  button.addEventListener("mouseleave", () => {
+    button.style.transform = "translate(0px, 0px)";
+  });
+});

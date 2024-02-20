@@ -7,7 +7,7 @@
   --purple-500: hsl(275, 76%, 48%);
   --purple-700: hsl(275, 82%, 30%);
   --purple-800: hsl(275, 82%, 22%);
-  --purple-900: hsl(275, 83%, 14%);
+  --purple-900: hsl(275, 10%, 15%);
   --white: #fafafa;
   --black: #041404;
 }
@@ -23,6 +23,7 @@ body {
   font-family: "Work Sans", sans-serif;
   color: var(--purple-900);
   margin: 0;
+  text-align: center;
 }
 
 .wrapper {
@@ -41,8 +42,8 @@ h2 {
 
 h4 {
   font-size: 2.3em;
-  margin: 0;
   font-weight: 500;
+  margin: 2rem 0 0 0;
 }
 
 p {
@@ -133,32 +134,69 @@ ul li a:hover {
   color: var();
 }
 
-a.button-1 {
-  background-color: var(--purple-500);
-  display: flex;
-  align-items: center;
-  color: white;
-  font-size: 1.8rem;
-  padding: 1.6rem 2.4rem;
+.button-1,
+.button-2 {
+  position: relative;
+  overflow: hidden;
   border-radius: 4rem;
-  transition: 0.2s;
-}
-
-a.button-2 {
-  background-color: none;
-  border: 1.5px solid hsla(275, 83%, 14%, 0.25);
-  display: flex;
-  align-items: center;
-  color: var(--purple-900);
-  font-size: 1.8rem;
   padding: 1.6rem 2.4rem;
-  border-radius: 4rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  transition: 0.2s;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+  z-index: 1;
 }
 
-a.button-primary:hover {
+.button-1 {
+  background-color: var(--purple-500);
+  color: white;
+  border: none;
+}
+
+.button-2 {
+  background-color: transparent;
+  color: var(--purple-900);
+  border: 1.5px solid hsla(275, 83%, 14%, 0.25);
+}
+
+.button-1::before,
+.button-2::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
   background-color: var(--purple-400);
+  border-radius: 35%;
+  transition: transform 0.5s, opacity 0.3s;
+  z-index: -1;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: 50% 100%;
+}
+
+.button-1:hover::before,
+.button-2:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: transform 0.5s;
+}
+
+.button-1:not(:hover)::before,
+.button-2:not(:hover)::before {
+  transform: translate(-50%, -150%) scale(0);
+  transition: transform 0.5s, opacity 0.3s 0.5s;
+}
+
+.button-2:hover {
+  border-color: rgba(255, 255, 255, 0);
+  transition: color 0.3s, border-color 0.5s 0.5s;
+  color: white;
 }
 
 .mobile-menu {
@@ -174,31 +212,34 @@ a.button-primary:hover {
 .work {
   display: flex;
   flex-direction: column;
-  gap: 3.5em;
+  gap: 6.5em;
 }
 
 .project {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  align-items: center;
+  gap: 1rem;
 }
 
 .project img {
-  border-radius: 20px;
-  box-shadow: -4px -4px 16px hsla(0, 0%, 100%, 0.5),
+  box-shadow: -2px -2px 16px hsla(0, 0%, 100%, 0.25),
     4px 4px 16px hsla(0, 0%, 82%, 0.5);
 }
 
 img {
-  height: 300px;
-  width: auto;
+  height: auto;
+  max-height: 450px;
+  width: 100%;
   object-fit: cover;
 }
 
 .pill {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  margin: 0;
 }
 
 .pill a {
@@ -211,22 +252,56 @@ img {
   padding: 1rem 2rem;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  margin: 0;
   border-radius: 3.2em;
 }
 
 footer {
-  background: linear-gradient(hsla(275, 82%, 22%, 1), hsla(275, 83%, 14%, 1));
+  margin-top: 10rem;
+  padding: 3.5rem;
+  background: var(--purple-900);
   color: var(--white);
-  text-align: center;
-  padding: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+footer .wrapper {
+  margin: 0;
+}
+
+.social-media {
+  margin: 1.5em auto;
+}
+
+footer .button-2 {
+  color: white;
+  border-color: hsla(0, 0%, 100%, 0.25);
+  display: flex;
+  width: auto;
+  align-items: center;
+}
+
+footer p {
+  color: white;
+  font-size: 1.4em;
+}
+
+.social-icon i {
+  font-size: 2.4rem;
+  color: white;
+  text-decoration: none;
+  margin: 2rem 2rem 6.4rem 2rem;
 }
 
 @media screen and (min-width: 600px) {
   .menu-btn,
   .close {
     display: none;
+  }
+
+  body {
+    text-align: left;
   }
 
   nav {
@@ -245,5 +320,28 @@ footer {
     display: flex;
     align-items: center;
     gap: 3.5em;
+  }
+
+  img {
+    max-width: 600px;
+  }
+
+  .work {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project {
+    align-items: start;
+    max-width: 600px;
+  }
+
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer .button-2 {
+    display: inline-block;
   }
 }
