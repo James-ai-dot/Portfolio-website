@@ -21,6 +21,8 @@ html {
 body {
   background-color: white;
   font-family: "Work Sans", sans-serif;
+  font-size: clamp(0.703125rem, 0.200875rem + 2.5714vw, 1.40625rem);
+
   color: var(--purple-900);
   margin: 0;
   text-align: center;
@@ -28,11 +30,12 @@ body {
 
 .wrapper {
   max-width: 1200px;
-  margin: 0 2.4em;
+  margin: 0 3.2em;
 }
 
 h1 {
-  font-size: 3.1em;
+  font-size: 3.5em;
+  font-weight: 700;
 }
 
 h2 {
@@ -47,9 +50,8 @@ h4 {
 }
 
 p {
-  font-size: 1.5em;
-  margin: 0;
-  color: #041404;
+  font-size: 1.6em;
+  color: hsl(275, 10%, 15%, 0.8);
 }
 
 header {
@@ -151,6 +153,11 @@ ul li a:hover {
   z-index: 1;
 }
 
+main .button-1,
+.button-2 {
+  margin-top: 1.6rem;
+}
+
 .button-1 {
   background-color: var(--purple-500);
   color: white;
@@ -206,7 +213,10 @@ ul li a:hover {
 }
 
 .hero {
-  margin-top: 12rem;
+  margin: 12rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.4rem;
 }
 
 .work {
@@ -219,7 +229,7 @@ ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.6rem;
 }
 
 .project img {
@@ -228,14 +238,14 @@ ul li a:hover {
 }
 
 img {
-  height: auto;
-  max-height: 450px;
   width: 100%;
   object-fit: cover;
 }
 
 .pill {
+  font-size: 1em;
   display: flex;
+  gap: 1.6rem
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
@@ -264,6 +274,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+}
+
+footer hr {
+  display: flex;
+  width: 100%;
+  margin: 3.2em 0;
 }
 
 footer .wrapper {
@@ -300,8 +316,72 @@ footer p {
     display: none;
   }
 
+  nav {
+    position: unset;
+    height: auto;
+    background: none;
+    padding: 0;
+    width: auto;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 3.5em;
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .work {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .project {
+    align-items: start;
+    max-width: 320px;
+  }
+
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer .button-2 {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 800px) {
   body {
     text-align: left;
+  }
+
+  .project {
+    align-items: start;
+  }
+
+  svg {
+    width: 40vw;
+    height: auto;
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .menu-btn,
+  .close {
+    display: none;
   }
 
   nav {
@@ -322,18 +402,15 @@ footer p {
     gap: 3.5em;
   }
 
-  img {
-    max-width: 600px;
-  }
-
   .work {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .project {
-    align-items: start;
-    max-width: 600px;
+    max-width: 550px;
   }
 
   footer {
@@ -343,5 +420,20 @@ footer p {
 
   footer .button-2 {
     display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    margin: 0 auto;
+  }
+
+  footer .wrapper {
+    margin: 0 auto;
+  }
+
+  footer hr {
+    width: 100vw;
+    max-width: 1200px;
   }
 }

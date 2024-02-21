@@ -21,11 +21,20 @@ if (returnTop) {
 document.addEventListener("DOMContentLoaded", function () {
   var user = "contact";
   var domain = "jamesdavid.eu";
-  var elem = document.getElementById("email-link");
-  elem.textContent = user + "@" + domain;
+  var emailLink = document.getElementById("email-link");
+  var contactLink = document.getElementById("contact-link");
 
-  // The click event listener will only set up the mailto link
-  elem.addEventListener("click", function (event) {
+  // Set the footer email link text
+  emailLink.textContent = user + "@" + domain;
+
+  // The click event listener for the footer email link
+  emailLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default action of the anchor
+    window.location.href = "mailto:" + user + "@" + domain;
+  });
+
+  // The click event listener for the header contact link
+  contactLink.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default action of the anchor
     window.location.href = "mailto:" + user + "@" + domain;
   });
