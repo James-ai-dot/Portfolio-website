@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>James David</title>
+    <!--normalize css-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <!--style sheet-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/612a861015.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_package_v0.16/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_package_v0.16/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_package_v0.16/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon_package_v0.16/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <!--header-->
+    <header>
+      <div class="container">
+        <div class="navtoggle" id="myNavtoggle">
+          <a href="index.html">
+            <img
+              id="header-logo"
+              src="img/name-logo.svg"
+              alt="James_David logo"
+            />
+          </a>
+          <nav>
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li>
+                <a href="#contact" onclick="menuToggle()">Contact</a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon"
+                  onclick="menuToggle()"
+                  aria-label="Dropdown menu"
+                  ><i class="fas fa-bars"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!--open main-->
+    <main>
+      <!--open whole section block-->
+      <div>
+        <!-- Introduction -->
+        <!--open container/wrapper-->
+        <div class="container" id="head">
+          <!--open row for (2) colums-->
+          <section class="row">
+            <!--open first column-->
+            <div class="col-md-6">
+              <h2>Location Setting (Shpock)</h2>
+              <p>
+                Part of a major update of the mobile and web secondhand
+                marketplace Shpock's location settings to address critical user feedback and
+                competitive benchmarks, focusing on the ease of listing and
+                searching items based on preferred locations.
+              </p>
+              <p>
+                Designed user flows, low fidelity wireframes and mockups of
+                several overhauls to onboarding, listings and searching.
+                Designed from the ground up.
+              </p>
+              <h5>Responsibilities:</h5>
+              <p>UX Research, UX Design, UI Design</p>
+              <!-- <a href="" class="button" target="_blank">Show prototype</a> -->
+            </div>
+            <!--end first column-->
+            <!--open second column-->
+            <div class="col-md-6 hidden">
+              <picture>
+                <source
+                  srcset="img/rshpock/header@2x.png"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="img/shpock/header@1x.png"
+                  alt="Vintage Life Head Mockup"
+                />
+              </picture>
+            </div>
+              <!--end of second column-->
+            </div>
+            <!--end row for (2 columns)-->
+          </section>
+          <!--end container/wrapper-->
+        </div>
+
+        <!-- Project planning -->
+        <div class="bg-100">
+          <!-- open container -->
+          <div class="container">
+            <!-- open row -->
+            <div class="row">
+              <h3>Project Planning</h3>
+              <!-- open first column -->
+              <div class="col-md-6">
+                <p>
+                  The update was driven by the insight that users required a
+                  more flexible and intuitive way to set their locations. This
+                  was evident from user reviews which highlighted issues such as
+                  difficulties in changing locations, problems with address
+                  recognition, and the necessity of sharing exact addresses.
+                </p>
+                <h4>Design Process</h4>
+                <p>
+                  Our team undertook a holistic approach to reimagine the
+                  location settings. The process included:
+                </p>
+                <ul>
+                  <li>
+                    <b>User Flows Analysis:</b> To ensure a seamless transition
+                    between different location setting options.
+                  </li>
+                  <li>
+                    <b>Low-Fidelity Wireframes:</b> To outline the basic
+                    structure of the new location features.
+                  </li>
+                  <li>
+                    <b>High-Fidelity Mockups:</b> To visualize the overhauled
+                    onboarding, listing, and searching experiences.
+                  </li>
+                </ul>
+              </div>
+              <!-- end first column -->
+              <!-- open second column -->
+              <div class="col-md-6">
+                <h4>Key Features</h4>
+                <ul>
+                  <li>
+                    <b>Onboarding:</b>Users now have the option to share their
+                    precise location or manually enter a ZIP code during the
+                    initial app setup.
+                  </li>
+                  <li>
+                    <b>Listing Flexibility:</b> Sellers can set their item's
+                    location to an exact address, which is internally used to
+                    display the item within a radius, ensuring privacy.
+                  </li>
+                  <li>
+                    <b>Enhanced Search:</b> The search function has been
+                    simplified with an easy location setting feature, allowing
+                    users to filter results by their preferred area.
+                  </li>
+                  <li>
+                    <b>Address Book:</b> Users can now save multiple addresses,
+                    such as home and work, for quicker listing and searching.
+                  </li>
+                </ul>
+              </div>
+              <!-- end second column -->
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- end container/wrapper -->
+        </div>
+
+        <!--mobile design-->
+        <div class="container">
+          <div class="row">
+            <h3 class="text-align">Final Designs</h3>
+            <h4 class="text-align">Onboarding</h4>
+            <div>
+              <picture>
+                <source
+                  srcset="img/shpock/onboarding-mockups@2x.png"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="img/shpock/onboarding-mockups@1x.png"
+                  alt="Mobile Mockups Row One"
+                />
+              </picture>
+            </div>
+            <h4 class="text-align">Saved locations</h4>
+            <div>
+              <picture>
+                <source
+                  srcset="img/shpock/saved-locations-mockups-one@2x.png"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="img/shpock/saved-locations-mockups-one@1x.png"
+                  alt="Saved Locations mockups"
+                />
+              </picture>
+            </div>
+            <div>
+              <picture>
+                <source
+                  srcset="img/shpock/saved-locations-mockups-two@2x.png"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="img/shpock/saved-locations-mockups-two@1x.png"
+                  alt="Saved Locations mockups"
+                />
+              </picture>
+            </div>
+            <h4 class="text-align">Searching</h4>
+            <div>
+              <picture>
+                <source
+                  srcset="img/shpock/searching-one@2x.png"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="img/shpock/searching-one@1x.png"
+                  alt="Saved Locations mockups"
+                />
+              </picture>
+            </div>
+            <div>
+              <picture>
+                <source
+                  srcset="img/shpock/searching-two@2x.png"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="img/shpock/searching-two@1x.png"
+                  alt="Saved Locations mockups"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <!--conclusion-->
+        <div class="bg-100">
+          <!--open container/wrapper-->
+          <div class="container">
+            <div class="row">
+              <h3>Final Thoughts</h3>
+              <!--open first column-->
+              <div class="col-md-6">
+                <p>
+                  The implementation of these features addressed the pain points
+                  identified in user reviews and competitor benchmarks. The new
+                  location settings empower users with better control over their
+                  privacy and improve the accuracy of listings and searches.
+                </p>
+                <p>
+                  Onboarding has become more flexible, offering users the choice
+                  to share their location automatically or manually. For
+                  sellers, the update has made listing items more intuitive,
+                  with the ability to choose their exact address without
+                  disclosing it publicly. For buyers, the updated search
+                  function now includes a location filter that maintains the
+                  users' search radius based on a ZIP code.
+                </p>
+              </div>
+              <!--end first column-->
+              <!-- open second column -->
+              <div class="col-md-6">
+                <p>
+                  The comprehensive redesign of Shpock's location settings in
+                  marks a pivotal improvement in user experience. By
+                  incorporating user feedback and addressing competitive gaps,
+                  the platform now offers a more personalized and user-friendly
+                  interface that streamlines the process of buying and selling
+                  on a secondhand marketplace.
+                </p>
+              </div>
+              <!-- end second column -->
+            </div>
+            <!-- end row for (2) column -->
+          </div>
+          <!-- end container -->
+        </div>
+        <!-- end section block -->
+      </div>
+
+      <!-- return to top button -->
+      <button id="return-top" aria-label="return top">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </main>
+
+    <!--footer-->
+    <footer id="contact">
+      <div class="footer-content">
+        <img
+          class="footer-logo"
+          src="img/footer-logo.svg"
+          alt="James_David logo"
+        />
+        <p id="email">
+          Email: <a href="javascript:void(0);" id="email-link">Click to view</a>
+        </p>
+
+        <!--Social Media Layout and Placeholders-->
+        <!--Linkedin-->
+        <div class="social-media">
+          <a href="#" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div id="copyright">
+        <sup>© James David 2024</sup>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/top.js"></script>
+  </body>
+</html>
