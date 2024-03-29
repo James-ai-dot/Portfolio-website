@@ -54,7 +54,6 @@ document.addEventListener("scroll", function () {
 
 // Dynamic button hover
 document.querySelectorAll(".dynamic-button").forEach((button) => {
-  // Apply a smooth transition to the transform property
   button.style.transition = "transform 0.1s ease-out";
 
   button.addEventListener("mousemove", (e) => {
@@ -71,4 +70,153 @@ document.querySelectorAll(".dynamic-button").forEach((button) => {
   button.addEventListener("mouseleave", () => {
     button.style.transform = "translate(0px, 0px)";
   });
+});
+
+// Image gallery
+
+// Click and drag
+const slider = document.querySelector(".image-row");
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("active");
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+// Drag-to-Scroll
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".image-gallery");
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    slider.classList.add("active");
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+    e.preventDefault();
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    isDown = false;
+    slider.classList.remove("active");
+  });
+
+  slider.addEventListener("mouseup", () => {
+    isDown = false;
+    slider.classList.remove("active");
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = x - startX;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+});
+
+// Fullscreen overlay
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fullScreenOverlay = document.createElement("div");
+  fullScreenOverlay.classList.add("full-screen-overlay");
+  document.body.appendChild(fullScreenOverlay);
+
+  fullScreenOverlay.addEventListener("click", function (event) {
+    // Get the position of the overlay
+    const rect = fullScreenOverlay.getBoundingClientRect();
+
+    // Increase the clickable area. Adjust these values as needed to cover the pseudo-element
+    const clickableWidth = 100; // Width of the clickable area
+    const clickableHeight = 100; // Height of the clickable area
+
+    // Check if the click is within the area of the pseudo-element
+    if (
+      event.clientX <= rect.left + clickableWidth &&
+      event.clientY <= rect.top + clickableHeight
+    ) {
+      fullScreenOverlay.classList.remove("active");
+    }
+  });
+
+  const images = document.querySelectorAll(".gallery-image");
+  images.forEach((image) => {
+    image.addEventListener("click", function () {
+      const clonedImageRow = image.closest(".image-row").cloneNode(true);
+      clonedImageRow.classList.add("cloned");
+
+      clonedImageRow.querySelectorAll(".gallery-image").forEach((img) => {
+        img.style.maxHeight = "70vh";
+        img.style.width = "auto";
+        img.style.maxWidth = "none";
+      });
+      fullScreenOverlay.innerHTML = "";
+      fullScreenOverlay.appendChild(clonedImageRow);
+      fullScreenOverlay.classList.add("active");
+
+      const imageIndex = Array.from(images).indexOf(image);
+      const clickedImage = clonedImageRow.children[imageIndex];
+      const offset =
+        clickedImage.offsetLeft +
+        clickedImage.clientWidth / 2 -
+        window.innerWidth / 2;
+      fullScreenOverlay.scrollLeft = offset;
+
+      applyDragToScroll(clonedImageRow);
+    });
+  });
+
+  function applyDragToScroll(element) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    element.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - element.getBoundingClientRect().left;
+      scrollLeft = element.scrollLeft;
+      e.preventDefault(); // Prevent default text selection
+    });
+
+    element.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+
+    element.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+
+    element.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - element.getBoundingClientRect().left;
+      const walk = x - startX;
+      element.scrollLeft = scrollLeft - walk;
+    });
+  }
 });

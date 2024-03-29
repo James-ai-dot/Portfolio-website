@@ -53,20 +53,22 @@
     </header>
 
     <main>
+      <div class="case-cover">
+        <img
+        src="assets/Shpock-cover-top.png"
+        alt="Location setting cover"
+        class="cover-wrapper"
+        />
+      </div>
+
       <section class="case-top">
-        <div class="case-cover">
-          <img
-            src="assets/Shpock-cover-top.png"
-            alt="Location setting cover"
-            class="cover-wrapper"
-          />
-        </div>
         <div class="wrapper">
-          <h1>Location Setting (Shpock)</h1>
+          <h2>Location Setting (Shpock)</h2>
           <p>
             A major update of the mobile and web secondhand marketplace Shpock's
-            location settings by address critical user feedback and implementing a new address book function.
+            location settings by addressing critical user feedback and implementing a new address book function.
           </p>
+          <div class="button2">Live site</div>
           <div class="row">
             <div class="flex-col">
               <h6>Role</h6>
@@ -76,7 +78,7 @@
             <div class="flex-col">
               <h6>Platform</h6>
               <hr />
-              <p>Native Mobile App (iOS, Android), Web</p>
+              <p>iOS, Android, Web</p>
             </div>
             <div class="flex-col">
               <h6>Year</h6>
@@ -86,6 +88,107 @@
           </div>
         </div>
       </section>
+
+      <section class="background-grey">
+<div class="wrapper">
+  <h3>Analysing the Problem</h3>
+  <div>
+  <p>
+    The update was driven by user reviews that highlighted a need for more flexible and intuitive way to set their locations.
+  </p>
+
+  <h6>Key issues identifed:</h6>
+  <ul class="two-column-grid">
+    <div class="left-col">
+    <li>Can’t use app without sharing location / no manual location entry</li>
+    <li>Need to use exact address</li>
+    <li>Address is not recognized</li>
+  </div>
+  <div class="right-col">
+    <li>Asking for location permission although already granted</li>
+    <li>Changing location doesn’t work</li>
+    <li>Wrong location when selling</li>
+  </div>
+  </ul>
+<div class="reviews img-padding">
+  <img src="assets/shpock/review-1.png" class="shadow review-one" alt="User Review 1">
+  <img src="assets/shpock/review-2.png" class="shadow review-two" alt="User Review 2">
+  <img src="assets/shpock/review-3.png" class="shadow review-three" alt="User Review 3">
+</div>
+      </section>
+
+      <section class="wrapper">
+        <h3>Competitive Analysis</h3>
+        <p>This update aimed to boost Shpock's local market appeal by providing an option besides sharing device location. I examined user location handling in 3 rival marketplace apps.</p>
+      <div class="two-column-grid">
+        <img src="assets/shpock/analysis.png" class="img-padding left-col" alt="Competitive Analysis">
+      <div class="right-col">
+        <h6>User Preference Trends:</h6>
+<p>Users seem to favor platforms that require minimal personal data. Shpock's ZIP code option aligns with this preference.</p>
+<h6>Features:</h6>
+<p>Analysis of competitors reveals a gap in intuitive location settings. Shpock's update fills this gap by offering more flexible location options.</p>
+</div>
+</div>
+      </section>
+
+<section class="background-grey">
+      <div class="wrapper">
+        <h3>Flow Diagrams and Low-fidelity Wireframes</h3>
+        <p>To outline all the necessary functionality I created 4 flow diagrams for the main tasks. One of the flows for onboarding is shown below. Fail state flows, edge cases were also created but are not shown due to space content.</p>
+        <ul class="two-column-grid">
+          <div class="left-col">
+          <li><b>Onboarding Process:</b> Wireframes show a dual-option onboarding, allowing users to share their location automatically or manually enter a ZIP code</li>
+          <li><b>Saved locations:</b> Users can save locations for quick access across the app in order to quickly list or search for items</li>
+        </div>
+        <div class="right-col">
+          <li><b>Listing Interface:</b> The listing screen wireframe includes an intuitive location entry point, emphasizing ease of setting and changing locations</li>
+          <li><b>Search Functionality:</b> Wireframes illustrate an enhanced search interface with a location filter based on the user’s chosen or entered location</li>
+        </div>
+        </ul>
+        <img src="assets/shpock/low-wireframes.png" class="img-padding" alt="Low-fidelity wireframes">
+      </div>
+    </section>
+
+    <section class="wrapper">
+      <h3>High-Fidelity Designs</h3>
+      <p>Once the initial flows were completed, high fidelity designs were created for all of the screens using the brand’s design system to keep all the designs cohesive and consistent across the app.
+      </p>
+      <div>
+      <h5>Saved Locations</h5>
+      <div class="image-gallery">
+        <div class="image-row">
+            <img src="assets/shpock/saved-mockup-01.png" alt="Image Description" class="gallery-image">
+            <img src="assets/shpock/saved-mockup-02.png" alt="Image Description" class="gallery-image">
+            <img src="assets/shpock/saved-mockup-03.png" alt="Image Description" class="gallery-image">
+            <img src="assets/shpock/saved-mockup-04.png" alt="Image Description" class="gallery-image">
+            <img src="assets/shpock/saved-mockup-05.png" alt="Image Description" class="gallery-image">
+            <img src="assets/shpock/saved-mockup-06.png" alt="Image Description" class="gallery-image">
+            <img src="assets/shpock/saved-mockup-07.png" alt="Image Description" class="gallery-image">
+            <img src="assets/shpock/saved-mockup-08.png" alt="Image Description" class="gallery-image">
+            <img src="assets/shpock/saved-mockup-09.png" alt="Image Description" class="gallery-image">
+        </div>
+    </div>
+  </div>
+  <div>
+    <h5>Searching filter</h5>
+    <div class="image-gallery">
+      <div class="image-row">
+          <img src="assets/shpock/search-mockup-01.png" alt="Image Description" class="gallery-image">
+          <img src="assets/shpock/search-mockup-02.png" alt="Image Description" class="gallery-image">
+          <img src="assets/shpock/search-mockup-03.png" alt="Image Description" class="gallery-image">
+          <img src="assets/shpock/search-mockup-04.png" alt="Image Description" class="gallery-image">
+          <img src="assets/shpock/search-mockup-05.png" alt="Image Description" class="gallery-image">
+          <img src="assets/shpock/search-mockup-06.png" alt="Image Description" class="gallery-image">
+      </div>
+  </div>
+</div>
+  </section>
+
+  <section class="wrapper">
+    <h3>Conclusion</h3>
+    <p>This Shpock update enhances user experience by refining location settings based on feedback, balancing intuitiveness and privacy, and strengthening its position in the secondhand market.</p>
+    <p>Continuous monitoring of user feedback and analysis of engagement and retention metrics post-update are employed to iterate and enhance features, measuring the impact of the changes.</p>
+  </section>
     </main>
 
     <footer id="contact">
@@ -106,7 +209,6 @@
         <p>© Code by James David </p>
       </p>
     </footer>
-
     <script src="js/scripts.js"></script>
   </body>
 </html>
