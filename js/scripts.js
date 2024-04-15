@@ -74,69 +74,74 @@ document.querySelectorAll(".dynamic-button").forEach((button) => {
 
 // Image gallery
 
-// Click and drag
-const slider = document.querySelector(".image-row");
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener("mousedown", (e) => {
-  isDown = true;
-  slider.classList.add("active");
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener("mouseleave", () => {
-  isDown = false;
-  slider.classList.remove("active");
-});
-
-slider.addEventListener("mouseup", () => {
-  isDown = false;
-  slider.classList.remove("active");
-});
-
-slider.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
-  slider.scrollLeft = scrollLeft - walk;
-});
-
-// Drag-to-Scroll
-
 document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".image-gallery");
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+  // Apply drag-to-scroll to each .image-row in every .image-gallery
+  document.querySelectorAll(".image-gallery").forEach((gallery) => {
+    const slider = gallery.querySelector(".image-row");
+    if (!slider) return; // Ensure the slider exists before attaching event listeners
 
-  slider.addEventListener("mousedown", (e) => {
-    isDown = true;
-    slider.classList.add("active");
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-    e.preventDefault();
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slider.classList.add("active");
+      startX = e.pageX - slider.getBoundingClientRect().left; // Use getBoundingClientRect for more accurate positioning
+      scrollLeft = slider.scrollLeft;
+      e.preventDefault(); // Prevent default actions such as text selection
+    });
+
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.getBoundingClientRect().left;
+      const walk = (x - startX) * 3; // Adjust the multiplier to control scroll speed
+      slider.scrollLeft = scrollLeft - walk;
+    });
   });
 
-  slider.addEventListener("mouseleave", () => {
-    isDown = false;
-    slider.classList.remove("active");
-  });
+  // General drag-to-scroll for the entire gallery if needed (optional and can be removed if each row is individually scrollable)
+  document.querySelectorAll(".image-gallery").forEach((gallery) => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-  slider.addEventListener("mouseup", () => {
-    isDown = false;
-    slider.classList.remove("active");
-  });
+    gallery.addEventListener("mousedown", (e) => {
+      isDown = true;
+      gallery.classList.add("active");
+      startX = e.pageX - gallery.getBoundingClientRect().left;
+      scrollLeft = gallery.scrollLeft;
+      e.preventDefault();
+    });
 
-  slider.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = x - startX;
-    slider.scrollLeft = scrollLeft - walk;
+    gallery.addEventListener("mouseleave", () => {
+      isDown = false;
+      gallery.classList.remove("active");
+    });
+
+    gallery.addEventListener("mouseup", () => {
+      isDown = false;
+      gallery.classList.remove("active");
+    });
+
+    gallery.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - gallery.getBoundingClientRect().left;
+      const walk = x - startX; // This controls the amount of scroll based on mouse movement
+      gallery.scrollLeft = scrollLeft - walk;
+    });
   });
 });
 
