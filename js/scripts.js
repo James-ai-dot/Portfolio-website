@@ -1,12 +1,11 @@
 // Mobile navigation
-function menuToggle() {
-  var x = document.getElementById("myNavtoggle");
-  if (x.className === "navtoggle") {
-    x.className += " responsive";
-  } else {
-    x.className = "navtoggle";
-  }
-}
+document.querySelector(".menu-btn").addEventListener("click", function () {
+  document.querySelector("nav").classList.toggle("open");
+});
+
+document.querySelector(".close").addEventListener("click", function () {
+  document.querySelector("nav").classList.toggle("open");
+});
 
 // Attempt to get the returnTop element
 var returnTop = document.getElementById("return-top");
@@ -22,11 +21,20 @@ if (returnTop) {
 document.addEventListener("DOMContentLoaded", function () {
   var user = "contact";
   var domain = "jamesdavid.eu";
-  var elem = document.getElementById("email-link");
-  elem.textContent = user + "@" + domain;
+  var emailLink = document.getElementById("email-link");
+  var contactLink = document.getElementById("contact-link");
 
-  // The click event listener will only set up the mailto link
-  elem.addEventListener("click", function (event) {
+  // Set the footer email link text
+  emailLink.textContent = user + "@" + domain;
+
+  // The click event listener for the footer email link
+  emailLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default action of the anchor
+    window.location.href = "mailto:" + user + "@" + domain;
+  });
+
+  // The click event listener for the header contact link
+  contactLink.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default action of the anchor
     window.location.href = "mailto:" + user + "@" + domain;
   });
@@ -44,24 +52,176 @@ document.addEventListener("scroll", function () {
   }
 });
 
-// Spline frame
-window.addEventListener("resize", adjustSplineEmbed);
+// Dynamic button hover
+document.querySelectorAll(".dynamic-button").forEach((button) => {
+  button.style.transition = "transform 0.1s ease-out";
 
-function adjustSplineEmbed() {
-  var splineEmbedContainer = document.querySelector(".spline-embed-container");
-  if (window.innerWidth >= 768) {
-    /* Match with CSS media query breakpoint */
-    var leftColumnHeight = document.querySelector(
-      ".col-md-6:first-child"
-    ).offsetHeight;
-    splineEmbedContainer.style.height = leftColumnHeight + "px";
-    splineEmbedContainer.style.paddingTop = 0; // Remove padding-top for large screens
-  } else {
-    // Reset styles for mobile
-    splineEmbedContainer.style.height = "auto";
-    splineEmbedContainer.style.paddingTop = "100%"; // Maintain square aspect ratio
+  button.addEventListener("mousemove", (e) => {
+    const rect = button.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    const translateX = x * 0.2;
+    const translateY = y * 0.2;
+
+    button.style.transform = `translate(${translateX}px, ${translateY}px)`;
+  });
+
+  button.addEventListener("mouseleave", () => {
+    button.style.transform = "translate(0px, 0px)";
+  });
+});
+
+// Image gallery
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Apply drag-to-scroll to each .image-row in every .image-gallery
+  document.querySelectorAll(".image-gallery").forEach((gallery) => {
+    const slider = gallery.querySelector(".image-row");
+    if (!slider) return; // Ensure the slider exists before attaching event listeners
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slider.classList.add("active");
+      startX = e.pageX - slider.getBoundingClientRect().left; // Use getBoundingClientRect for more accurate positioning
+      scrollLeft = slider.scrollLeft;
+      e.preventDefault(); // Prevent default actions such as text selection
+    });
+
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.getBoundingClientRect().left;
+      const walk = (x - startX) * 3; // Adjust the multiplier to control scroll speed
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  });
+
+  // General drag-to-scroll for the entire gallery if needed (optional and can be removed if each row is individually scrollable)
+  document.querySelectorAll(".image-gallery").forEach((gallery) => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    gallery.addEventListener("mousedown", (e) => {
+      isDown = true;
+      gallery.classList.add("active");
+      startX = e.pageX - gallery.getBoundingClientRect().left;
+      scrollLeft = gallery.scrollLeft;
+      e.preventDefault();
+    });
+
+    gallery.addEventListener("mouseleave", () => {
+      isDown = false;
+      gallery.classList.remove("active");
+    });
+
+    gallery.addEventListener("mouseup", () => {
+      isDown = false;
+      gallery.classList.remove("active");
+    });
+
+    gallery.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - gallery.getBoundingClientRect().left;
+      const walk = x - startX; // This controls the amount of scroll based on mouse movement
+      gallery.scrollLeft = scrollLeft - walk;
+    });
+  });
+});
+
+// Fullscreen overlay
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fullScreenOverlay = document.createElement("div");
+  fullScreenOverlay.classList.add("full-screen-overlay");
+  document.body.appendChild(fullScreenOverlay);
+
+  fullScreenOverlay.addEventListener("click", function (event) {
+    // Get the position of the overlay
+    const rect = fullScreenOverlay.getBoundingClientRect();
+
+    // Increase the clickable area. Adjust these values as needed to cover the pseudo-element
+    const clickableWidth = 100; // Width of the clickable area
+    const clickableHeight = 100; // Height of the clickable area
+
+    // Check if the click is within the area of the pseudo-element
+    if (
+      event.clientX <= rect.left + clickableWidth &&
+      event.clientY <= rect.top + clickableHeight
+    ) {
+      fullScreenOverlay.classList.remove("active");
+    }
+  });
+
+  const images = document.querySelectorAll(".gallery-image");
+  images.forEach((image) => {
+    image.addEventListener("click", function () {
+      const clonedImageRow = image.closest(".image-row").cloneNode(true);
+      clonedImageRow.classList.add("cloned");
+
+      clonedImageRow.querySelectorAll(".gallery-image").forEach((img) => {
+        img.style.maxHeight = "70vh";
+        img.style.width = "auto";
+        img.style.maxWidth = "none";
+      });
+      fullScreenOverlay.innerHTML = "";
+      fullScreenOverlay.appendChild(clonedImageRow);
+      fullScreenOverlay.classList.add("active");
+
+      const imageIndex = Array.from(images).indexOf(image);
+      const clickedImage = clonedImageRow.children[imageIndex];
+      const offset =
+        clickedImage.offsetLeft +
+        clickedImage.clientWidth / 2 -
+        window.innerWidth / 2;
+      fullScreenOverlay.scrollLeft = offset;
+
+      applyDragToScroll(clonedImageRow);
+    });
+  });
+
+  function applyDragToScroll(element) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    element.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - element.getBoundingClientRect().left;
+      scrollLeft = element.scrollLeft;
+      e.preventDefault(); // Prevent default text selection
+    });
+
+    element.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+
+    element.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+
+    element.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - element.getBoundingClientRect().left;
+      const walk = x - startX;
+      element.scrollLeft = scrollLeft - walk;
+    });
   }
-}
-
-// Initialize on load
-adjustSplineEmbed();
+});

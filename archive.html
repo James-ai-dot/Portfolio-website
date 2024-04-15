@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>James David</title>
+    <!--normalize css-->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <!--style sheet-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--favicon-->
+    <script
+      src="https://kit.fontawesome.com/612a861015.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_package_v0.16/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_package_v0.16/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_package_v0.16/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon_package_v0.16/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+    <!--header-->
+    <header>
+      <div class="container">
+        <div class="navtoggle" id="myNavtoggle">
+          <a href="index.html">
+            <img
+              id="header-logo"
+              src="img/name-logo.svg"
+              alt="James_David logo"
+            />
+          </a>
+          <nav>
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li>
+                <a href="#contact" onclick="menuToggle()">Contact</a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon"
+                  onclick="menuToggle()"
+                  aria-label="Dropdown menu"
+                  ><i class="fas fa-bars"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!--open main-->
+    <main>
+      <!--hero section-->
+      <section id="hero" class="container">
+        <h1 class="hidden">
+          Hi, I’m <span>James</span><br />
+          UX/UI designer
+        </h1>
+      </section>
+
+      <!--work/projects-->
+      <div id="work">
+        <!--open container/wrapper-->
+        <div class="container">
+          <section class="row-pb-0">
+            <h2 class="hidden">Recent work</h2>
+          </section>
+
+          <!--Shpock-->
+          <section class="row">
+            <!-- open first column (used for image) -->
+            <div class="col-md-6 col-lg-7 hidden">
+              <a href="location.html">
+                <picture>
+                  <source
+                    srcset="img/shpock/shpock_cover@2x.jpg"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="img/shpock/shpock_cover@1x.jpg"
+                    class="shadow"
+                    alt="Location setting cover"
+                  />
+                </picture>
+              </a>
+              <!-- end first column -->
+            </div>
+            <!-- open second column -->
+            <div class="col-md-6 col-lg-5 hidden">
+              <h4>Location Setting (Shpock)</h4>
+              <p>
+                <div class="pill">
+                <span>Mobile</span>
+                <span>Web</span>
+                <span>UX</span>
+              </p>
+            </div>
+              <p>
+                New app and website feature for saving preferred locations to
+                streamline the listing and searching experience.
+              </p>
+              <!-- end paragraph -->
+              <a href="location.html" class="button">Read more</a
+              ><!-- button or link label -->
+            </div>
+            <!-- end second column -->
+          </section>
+          <!-- end row  -->
+
+          <!--Vintage Life-->
+          <section class="row">
+            <!-- open first column (used for image) -->
+            <div class="col-md-6 col-lg-7 hidden">
+              <a href="vintage-life.html">
+                <picture>
+                  <source
+                    srcset="img/vintagelife/vintagelife_cover@2x.jpg"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="img/vintagelife/vintagelife_cover@1x.jpg"
+                    class="shadow"
+                    alt="Vintage Life cover"
+                  />
+                </picture>
+              </a>
+              <!-- end first column -->
+            </div>
+            <!-- open second column -->
+            <div class="col-md-6 col-lg-5 hidden">
+              <h4>Vintage Life</h4>
+              <p>
+                <span class="pill">Mobile</span>
+                <span class="pill">Responsive</span>
+                <span class="pill">iOS</span>
+              </p>
+              <p>
+                A user friendly and convenient online store for users to find
+                and buy vintage clothing online. Users can browse and buy
+                apparel, save items for later and create an account for a
+                quicker checkout.
+              </p>
+              <!-- end paragraph -->
+              <a href="vintage-life.html" class="button">Read more</a
+              ><!-- button or link label -->
+            </div>
+            <!-- end second column -->
+          </section>
+          <!-- end row  -->
+
+          <!--Onestop Club-->
+          <section class="row">
+            <!-- open first column -->
+            <div class="col-md-6 col-lg-7 hidden">
+              <a href="onestop-club.html">
+                <picture>
+                  <source
+                    srcset="img/onestop/onestopclub_cover@2x.jpg"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="img/onestop/onestopclub_cover@1x.jpg"
+                    class="shadow"
+                    alt="OneStopclub cover"
+                  />
+                </picture>
+              </a>
+            </div>
+            <!-- end first column -->
+            <!-- open second column -->
+            <div class="col-md-6 col-lg-5 hidden">
+              <h4>Onestop Club</h4>
+              <p>
+                <span class="pill">Mobile</span>
+                <span class="pill">iOS</span>
+                <span class="pill">Android</span>
+              </p>
+              <p>
+                <!-- open paragraph -->
+                Onestop Club serves as a hub for finding dance events from
+                various sources in one handy app. Users can find and save
+                events, add them to their phone calendar, as well as look up
+                artists and promoters.
+              </p>
+              <a href="onestop-club.html" class="button">Read more</a
+              ><!-- button or link label -->
+            </div>
+            <!-- end second column -->
+          </section>
+          <!-- end row that holds (2) columns for project -->
+
+          <!--Rewind-->
+          <section class="row">
+            <!-- open row that holds (2) columns for project -->
+            <div class="col-md-6 col-lg-7 hidden">
+              <!-- open first column (used for image) -->
+              <a href="rewind.html">
+                <picture>
+                  <source
+                    srcset="img/rewind/rewind_cover@2x.jpg"
+                    media="(max-width:767px)"
+                  />
+                  <img
+                    src="img/rewind/rewind_cover@1x.jpg"
+                    class="shadow"
+                    alt="OneStopclub cover"
+                  />
+                </picture>
+              </a>
+            </div>
+            <!-- end first column -->
+            <!-- open second column (used for text) -->
+            <div class="col-md-6 col-lg-5 hidden">
+              <h4>Rewind</h4>
+              <p>
+                <span class="pill">Mobile</span>
+                <span class="pill">iOS</span>
+              </p>
+              <p>
+                <!-- open paragraph -->
+                Rewind is a Music Player app where users can listen to their
+                favorite 80s music songs, create a profile and playlists, sing
+                along with scrolling lyrics. use socials and an advanced search
+                function.
+              </p>
+              <a href="rewind.html" class="button">Read more</a
+              ><!-- button or link label -->
+            </div>
+            <!-- end second column -->
+          </section>
+          <!-- end row that holds (2) columns for project -->
+        </div>
+        <!-- end container/wrapper -->
+      </div>
+    </main>
+    <!--end main-->
+
+    <!--footer-->
+    <footer id="contact">
+      <div class="footer-content">
+        <img
+          class="footer-logo"
+          src="img/footer-logo.svg"
+          alt="James_David logo"
+        />
+        <p id="email">
+          Email: <a href="javascript:void(0);" id="email-link">Click to view</a>
+        </p>
+
+        <!--Social Media Layout and Placeholders-->
+        <!--Linkedin-->
+        <div class="social-media">
+          <a href="#" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div id="copyright">
+        <sup>© James David 2024</sup>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/scroll.js"></script>
+  </body>
+</html>

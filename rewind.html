@@ -3,489 +3,200 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>James David</title>
-    <!--normalize css-->
+    <title>James David - UI/UX Design</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <!--style sheet-->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <script
       src="https://kit.fontawesome.com/612a861015.js"
       crossorigin="anonymous"
     ></script>
     <!--favicon-->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon_package_v0.16/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon_package_v0.16/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon_package_v0.16/favicon-16x16.png"
-    />
-    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="favicon_package_v0.16/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
   </head>
 
   <body>
-    <!--header-->
     <header>
-      <div class="container">
-        <div class="navtoggle" id="myNavtoggle">
-          <a href="index.html">
-            <img
-              id="header-logo"
-              src="img/name-logo.svg"
-              alt="James_David logo"
-            />
-          </a>
+      <div class="navbar wrapper">
+        <a href="index.html" class="logo">James David</a>
+
+        <div class="nav-wrapper">
           <nav>
+            <img src="assets/close.svg" class="close" alt="Close Menu" />
             <ul>
-              <li><a href="index.html">Work</a></li>
+              <li><a href="index.html" class="active">Home</a></li>
               <li><a href="about.html">About</a></li>
-              <li>
-                <a href="#contact" onclick="menuToggle()">Contact</a>
-              </li>
-              <li>
-                <a
-                  href="javascript:void(0);"
-                  class="icon"
-                  onclick="menuToggle()"
-                  aria-label="Dropdown menu"
-                  ><i class="fas fa-bars"></i
-                ></a>
-              </li>
             </ul>
           </nav>
+
+          <div class="mobile-menu">
+            <a href="#" id="contact-link" class="button1 dynamic-button">
+              Contact
+            </a>
+
+            <img src="assets/menu.svg" class="menu-btn" alt="Open Menu" />
+          </div>
         </div>
       </div>
     </header>
 
-    <!--open main-->
     <main>
-      <!--open whole section block-->
-      <div>
-        <!-- Introduction -->
-        <!--open container/wrapper-->
-        <div class="container" id="head">
-          <!--open row for (2) colums-->
-          <section class="row">
-            <!--open first column-->
-            <div class="col-md-6 hidden">
-              <h2>Rewind</h2>
-              <p>
-                A Music Player app dedicated to 80s music. Users can listen to
-                songs, sing along with scrolling lyrics, create profiles and
-                playlists. It stands out with its 80s-inspired design, offering
-                a unique experience compared to competitors.
-              </p>
-              <p>
-                Designed for iOS, users can also search for artists, use
-                advanced search filters, and engage socially by commenting on
-                playlists and following others.
-              </p>
-              <h5>responsibilities</h5>
-              <p>UX Research, UX Design, UI Design</p>
-              <a
-                href="https://www.figma.com/proto/WaEcPrS7rHIuS4pVaxaB0o/80's-Music-App?page-id=901%3A623&node-id=902%3A965&viewport=384%2C394%2C0.47&scaling=scale-down&starting-point-node-id=902%3A965"
-                class="button"
-                target="_blank"
-                >Show prototype</a
-              >
-            </div>
-            <!--end first column-->
-            <!--open second column-->
-            <div class="col-md-6 hidden">
-              <picture>
-                <source
-                  srcset="img/rewind/header@2x.png"
-                  media="(max-width:767px)"
-                />
-                <img
-                  src="img/rewind/header@1x.png"
-                  alt="Vintage Life Head Mockup"
-                />
-              </picture>
-            </div>
-            <!--end of second column-->
-          </section>
-          <!--end row for (2 columns)-->
-        </div>
-        <!--end container/wrapper-->
-
-        <!-- User flow -->
-        <div class="bg-100">
-          <!-- open container/wrapper -->
-          <div class="container">
-            <!-- open row -->
-            <div class="row">
-              <!-- open first column -->
-              <div class="col-md-6">
-                <h3>User Flow</h3>
-                <p>
-                  After completing a competitor analysis and a small sample of
-                  interviews, I started by creating a user flow detailing the
-                  different steps users will take to accomplish their goals. 3
-                  main functionalities were defined for this project (create a
-                  profile, search for new artists and make a playlist).
-                  Preliminary research helped outline three additional
-                  functionalities (view lyrics when listening to a song,
-                  advanced search function and socials).
-                </p>
-              </div>
-              <!-- end first column -->
-              <!-- open second column -->
-              <div class="col-md-6">
-                <picture>
-                  <source
-                    srcset="img/rewind/user-flow@2x.png"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="img/rewind/user-flow@1x.png"
-                    alt="User Flow Diagram"
-                  />
-                </picture>
-              </div>
-              <!-- end second column -->
-            </div>
-            <!-- end row for (2) columns -->
-          </div>
-          <!-- end container/wrapper -->
-        </div>
-
-        <!-- Low to mid wireframes -->
-
-        <!--open container/wrapper-->
-        <div class="container">
-          <!--open row for two columns-->
-          <div class="row">
-            <!--open first column-->
-            <div class="col-md-6 col-lg-5">
-              <div>
-                <h3>Low to Mid-Fidelity Wireframes</h3>
-              </div>
-              <p>
-                I began with sketches, then transitioned to low fidelity
-                wireframes in Figma considering the desired functionalities and
-                user flow. Usability testing was done with friends.
-              </p>
-              <p>
-                While certain features, like the bottom navigation bar, aligned
-                with common music app designs, the advanced search function
-                required multiple iterations.
-              </p>
-            </div>
-            <!--end first column-->
-            <!--open second column-->
-            <div class="col-md-6 col-lg-7">
-              <picture>
-                <source
-                  srcset="img/rewind/low-mid-wireframes@2x.png"
-                  media="(max-width:767px)"
-                />
-                <img
-                  src="img/rewind/low-mid-wireframes@1x.png"
-                  alt="Low to Mid Wireframes"
-                />
-              </picture>
-            </div>
-            <!--end second column-->
-          </div>
-          <!--end row for (2) columns-->
-        </div>
-        <!--end of container/wrapper-->
-
-        <!-- Mood Board -->
-        <div class="bg-100">
-          <!--open container/wrapper-->
-          <div class="container">
-            <!-- open row for two columns -->
-            <div class="row">
-              <!--open first column-->
-              <div class="col-md-6">
-                <h3>Mood Board</h3>
-                <p>
-                  To establish the look and feel of the app I then created a
-                  mood board. The main inspiration was the “Memphis” design
-                  popular in the 80’s with its prominent use of geometric shapes
-                  and pastel shades.
-                </p>
-              </div>
-              <!--end first column-->
-              <!--open second column-->
-              <div class="col-md-6">
-                <picture>
-                  <source
-                    srcset="img/rewind/mood-board@2x.png"
-                    class="shadow"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="img/rewind/mood-board@1x.png"
-                    class="shadow"
-                    alt="Mood Board"
-                  />
-                </picture>
-              </div>
-              <!--end second column-->
-            </div>
-            <!-- end row for (2) columns -->
-          </div>
-          <!--end of container/wrapper-->
-        </div>
-
-        <!-- Logo -->
-        <!--open container/wrapper-->
-        <div class="container">
-          <!--open row for two columns-->
-          <div class="row">
-            <!--open first column-->
-            <div class="col-md-6">
-              <div>
-                <h3>Logo</h3>
-              </div>
-              <p>
-                The logo, inspired by a 1950s design by Josef Müller-Brockmann
-                (Schule für Sprachtherapie in Graphic Design vol. 1, Jens
-                Müller, 2021, p. 446), depicts a speaker surrounded by a rewind
-                arrow. Given the app's 1980s music focus, the rewind imagery
-                resonates, referencing the era's cassette culture. The logotype
-                employs capitalized Poppins Black with an inverted "R" to
-                emphasize the rewind theme.
-              </p>
-            </div>
-            <!--end first column-->
-            <!--open second column-->
-            <div class="col-md-6 container4">
-              <picture>
-                <source
-                  srcset="img/rewind/logo-group@2x.png"
-                  class="shadow"
-                  media="(max-width:767px)"
-                />
-                <img src="img/rewind/logo-group@1x.png" alt="Logo Group" />
-              </picture>
-            </div>
-            <!-- end second column -->
-          </div>
-          <!-- end row for (2) columns -->
-        </div>
-        <!--end of container/wrapper -->
-
-        <!-- Colors -->
-        <!--begin background  -->
-        <div class="bg-100">
-          <!--open container/wrapper-->
-          <div class="container">
-            <!--open row for two columns-->
-            <div class="row">
-              <!--open first column-->
-              <div class="col-md-6">
-                <h3>Colors</h3>
-                <p>
-                  To balance nostalgia with usability, I redesigned the color
-                  scheme, starting with a white “Memphis” background created in
-                  Illustrator featuring geometric shapes in pastel tones. This
-                  captured the “Memphis” essence without being overpowering.
-                </p>
-                <p>
-                  The main UI palette complements this with a flat minimal
-                  design. A dominant lilac purple pairs well with the
-                  background, giving a retro feel. Complementary shades of
-                  black, off-white, and occasional yellow and lavender accents
-                  ensure clarity. Pure white text contrasts the purple
-                  backgrounds.
-                </p>
-              </div>
-              <!--end first column-->
-              <!--open second column-->
-              <div class="col-md-6 container4">
-                <picture>
-                  <source
-                    srcset="img/rewind/colors@2x.png"
-                    media="(max-width:767px)"
-                  />
-                  <img src="img/rewind/colors@1x.png" alt="Color Scheme" />
-                </picture>
-              </div>
-              <!--end second column-->
-            </div>
-            <!-- end row -->
-          </div>
-          <!--end of container/wrapper-->
-        </div>
-
-        <!-- Typography -->
-        <!-- start background -->
-        <div class="bg-gray">
-          <!--open container/wrapper-->
-          <div class="container">
-            <!-- open row -->
-            <div class="row">
-              <!--open first column-->
-              <div class="col-md-6">
-                <h3>Typography</h3>
-                <p>
-                  Poppins, a geometric sans-serif typeface, was chosen for its
-                  scalability and its popularity in the latter half of the 20th
-                  century. It offers a modern, less formal feel than serif
-                  fonts. As an open-source option from Google fonts, Poppins
-                  feels fresher than the commonly used 80s Helvetica.
-                </p>
-              </div>
-              <!--end first column-->
-              <!--open second column-->
-              <div class="col-md-6 container4">
-                <picture>
-                  <source
-                    srcset="img/rewind/typography@2x.png"
-                    media="(max-width:767px)"
-                  />
-                  <img src="img/rewind/typography@1x.png" alt="Typography" />
-                </picture>
-              </div>
-              <!--end of second column-->
-            </div>
-            <!-- end row for (2) columns -->
-          </div>
-          <!-- end container -->
-        </div>
-        <!-- end background  -->
-
-        <!--Final Design-->
-        <div class="container">
-          <div class="row">
-            <h3 class="text-align">Final Design</h3>
-            <div>
-              <picture>
-                <source
-                  srcset="img/rewind/final-design@2x.png"
-                  media="(max-width:767px)"
-                />
-                <img
-                  src="img/rewind/final-design@1x.png"
-                  alt="Mobile Mockups Row One"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-
-        <!--conclusion-->
-        <div class="bg-100">
-          <!--open container/wrapper-->
-          <div class="container">
-            <div class="row">
-              <!--open first column-->
-              <div class="col-md-6 col-lg-5">
-                <h3>Final Thoughts</h3>
-                <div>
-                  <h5>What went well?</h5>
-                  <p>
-                    The app’s unique look added significant personality.
-                    Establishing a robust visual identity early on paved the way
-                    for the final design.
-                  </p>
-                </div>
-                <div>
-                  <h5>What were the challenges?</h5>
-                  <p>
-                    Designing an advanced search function was time-consuming due
-                    to its novelty in music apps. Perfecting the color scheme to
-                    embody the Memphis design while ensuring usability also took
-                    multiple iterations.
-                  </p>
-                </div>
-                <div>
-                  <h5>What could be improved?</h5>
-                  <p>
-                    Implementing a dark mode could improve user experience
-                    during prolonged usage, aligning with standards in other
-                    music apps.
-                  </p>
-                </div>
-              </div>
-              <!--end first column-->
-              <!-- open second column -->
-              <div class="col-md-6 col-lg-7 footermock">
-                <picture>
-                  <source
-                    srcset="img/rewind/footer-mockup@2x.png"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="img/rewind/footer-mockup@1x.png"
-                    alt="Footer Mockup"
-                  />
-                </picture>
-              </div>
-              <!-- end second column -->
-            </div>
-            <!-- end row for (2) column -->
-          </div>
-          <!-- end container -->
-        </div>
-        <!-- end section block -->
+      <div class="case-cover rewind-background">
+        <img
+        src="assets/rewind/rewind-cover-top.png"
+        alt="Location setting cover"
+        class="cover-wrapper"
+        />
       </div>
 
-      <!-- return to top button -->
-      <button id="return-top" aria-label="return top">
-        <i class="fas fa-chevron-up"></i>
-      </button>
+      <section class="case-top">
+        <div class="wrapper">
+          <h2>Rewind</h2>
+          <p>
+            A dedicated 80s music player app for iOS, this app allows users to enjoy songs with scrolling lyrics, create and share playlists, and search for artists using advanced filters. The app also offers social engagement options such as commenting and following.
+          </p>
+          <a href="https://www.figma.com/proto/WaEcPrS7rHIuS4pVaxaB0o/Rewind-(Music-app)?page-id=901%3A623&type=design&node-id=902-965&viewport=-296%2C208%2C0.32&t=EgIIe8TwbRe8uLZV-1&scaling=scale-down&starting-point-node-id=902%3A965&mode=design" target="_blank" class="button2 dynamic-button">Prototype <img src="assets/arrow-top-right.svg" alt="arrow top right"></a>
+          <div class="row">
+            <div class="flex-col">
+              <h6>Role</h6>
+              <hr />
+              <p>UX Research, UX Design, UI Design</p>
+            </div>
+            <div class="flex-col">
+              <h6>Platform</h6>
+              <hr />
+              <p>iOS, Android</p>
+            </div>
+            <div class="flex-col">
+              <h6>Year</h6>
+              <hr />
+              <p>2022</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="background-grey">
+<div class="wrapper">
+    <h3>Project Planning</h3>
+    <div class="two-column-grid">
+    <div class="left-col">
+  <img
+  src="assets/rewind/user-flow@1x.png"
+  alt="User Flow Diagram"
+  />
+</div>
+<div class="right-col">
+                <p>
+                    Following competitor analysis and interviews, I developed a user flow for three primary functionalities (creating a profile, searching for new artists, and making a playlist)
+                </p>
+                <p>
+                    Three additional features were also outlined (viewing lyrics, advanced search, and social interactions) based on preliminary research.
+                </p>
+            </div>
+        </div>
+  <div>
+      </section>
+
+      <section class="wrapper">
+          <h3>Low to Mid-Fidelity Wireframes</h3>
+          <div class="two-column-grid">
+              <p class="left-col">I started by sketching and then created low-fidelity wireframes in Figma, keeping in mind the desired functionalities and user flow, and conducted usability testing with friends. The design included standard features like a bottom navigation bar and required multiple iterations for more complex elements like the advanced search function.</p>
+              <img
+              src="assets/rewind/low-mid-wireframes@1x.png"
+              alt="Low to Mid Wireframes"
+              class="right-col"/>            
+        </div>
+          </section>
+
+    <section>
+      <div class="wrapper">
+        <h3>Colors</h3>
+        
+      <div class="two-column-grid">
+        <div class="left-col">
+          <p>I designed the app's color scheme for a nostalgic yet usable look, using a white "Memphis" background with pastel geometric shapes in Illustrator. </p>
+          <p>The main UI features a flat minimal design with a dominant lilac purple, complemented by black, off-white, and yellow and lavender accents, ensuring clarity and contrast with pure white text.</p>
+        </div>
+        <img src="assets/rewind/colors@1x.png" class="right-col" alt="Color Scheme">
+    </section>
+
+    <section class="wrapper">
+      <h3>High Fidelity Designs</h3>
+      <div class="image-gallery">
+        <div class="image-row">
+            <img src="assets/rewind/mockup-01.png" alt="Image Description" class="gallery-image">
+            <img src="assets/rewind/mockup-02.png" alt="Image Description" class="gallery-image">
+            <img src="assets/rewind/mockup-03.png" alt="Image Description" class="gallery-image">
+            <img src="assets/rewind/mockup-04.png" alt="Image Description" class="gallery-image">
+            <img src="assets/rewind/mockup-05.png" alt="Image Description" class="gallery-image">
+            <img src="assets/rewind/mockup-06.png" alt="Image Description" class="gallery-image">
+            <img src="assets/rewind/mockup-07.png" alt="Image Description" class="gallery-image">
+            <img src="assets/rewind/mockup-08.png" alt="Image Description" class="gallery-image">
+            <img src="assets/rewind/mockup-09.png" alt="Image Description" class="gallery-image">
+            <img src="assets/rewind/mockup-10.png" alt="Image Description" class="gallery-image">
+        </div>
+    </div>
+  </section>
+
+  <section class="wrapper">
+    <h3>Final Thoughts</h3>
+    <div class="two-column-grid">
+      <div class="left-col">
+          <h6>What went well?</h6>
+          <p>
+            The app’s distinctive design established a strong visual
+            identity, setting the stage for the final design.
+          </p>
+          <h6>What were the challenges?</h6>
+          <p>
+            Creating an innovative search function was complex and
+            time-intensive. Developing a usable color scheme that
+            reflects the Memphis design required several iterations.
+          </p>
+          <h6>What could be improved?</h6>
+          <p>
+            Adding a dark mode could enhance user experience for
+            extended use, matching features found in other music apps.
+          </p>
+        </div>
+        <div class="right-col">
+          <img src="assets/rewind/end-mockup.png" alt="Phone and Browser Mockup">
+        </div>
+    </div>
+  </section>
     </main>
 
-    <!--footer-->
     <footer id="contact">
-      <div class="footer-content">
-        <img
-          class="footer-logo"
-          src="img/footer-logo.svg"
-          alt="James_David logo"
-        />
-        <p id="email">
-          Email: <a href="javascript:void(0);" id="email-link">Click to view</a>
-        </p>
+      <div class="wrapper">
+        <h2>Let's work together</h2>
+        <hr>
+          <a href="javascript:void(0);" id="email-link" class="button2 dynamic-button">Click to view</a>
 
-        <!--Social Media Layout and Placeholders-->
-        <!--Linkedin-->
         <div class="social-media">
-          <a href="#" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
+          <a href="https://www.linkedin.com/in/jamesdavidturrell/" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <i class="fab fa-linkedin-in dynamic-button"></i>
+          </a>
+          <a href="" class="social-icon">
+            <i class="fa-brands fa-behance dynamic-button"></i>
           </a>
         </div>
-      </div>
-      <div id="copyright">
-        <sup>© James David 2024</sup>
-      </div>
+          <p>
+        <p>© Code by James David </p>
+      </p>
     </footer>
-
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
     <script src="js/scripts.js"></script>
-    <script src="js/scroll.js"></script>
   </body>
 </html>

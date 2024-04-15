@@ -3,610 +3,231 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>James David</title>
-    <!--normalize css-->
+    <title>Vintage Life - Case Study</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <!--style sheet-->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <script
       src="https://kit.fontawesome.com/612a861015.js"
       crossorigin="anonymous"
     ></script>
     <!--favicon-->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon_package_v0.16/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon_package_v0.16/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon_package_v0.16/favicon-16x16.png"
-    />
-    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="favicon_package_v0.16/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
   </head>
 
   <body>
-    <!--header-->
     <header>
-      <div class="container">
-        <div class="navtoggle" id="myNavtoggle">
-          <a href="index.html">
-            <img
-              id="header-logo"
-              src="img/name-logo.svg"
-              alt="James_David logo"
-            />
-          </a>
+      <div class="navbar wrapper">
+        <a href="index.html" class="logo">James David</a>
+
+        <div class="nav-wrapper">
           <nav>
+            <img src="assets/close.svg" class="close" alt="Close Menu" />
             <ul>
-              <li><a href="index.html">Work</a></li>
+              <li><a href="index.html" class="active">Home</a></li>
               <li><a href="about.html">About</a></li>
-              <li>
-                <a href="#contact" onclick="menuToggle()">Contact</a>
-              </li>
-              <li>
-                <a
-                  href="javascript:void(0);"
-                  class="icon"
-                  onclick="menuToggle()"
-                  aria-label="Dropdown menu"
-                  ><i class="fas fa-bars"></i
-                ></a>
-              </li>
             </ul>
           </nav>
+
+          <div class="mobile-menu">
+            <a href="#" id="contact-link" class="button1 dynamic-button">
+              Contact
+            </a>
+
+            <img src="assets/menu.svg" class="menu-btn" alt="Open Menu" />
+          </div>
         </div>
       </div>
     </header>
 
-    <!--open main-->
     <main>
-      <!--open whole section block-->
-      <div>
-        <!-- Introduction -->
-        <!--open container/wrapper-->
-        <div class="container" id="head">
-          <!--open row for (2) colums-->
-          <section class="row">
-            <!--open first column-->
-            <div class="col-md-6 hidden">
-              <h2>Vintage Life</h2>
-              <p>
-                <em>Vintage Life</em> aims to create a convenient online
+      <div class="case-cover vintage-background">
+        <img
+        src="assets/vintagelife/vintage-cover-top.png"
+        alt="Location setting cover"
+        class="cover-wrapper"
+        />
+      </div>
+
+      <section class="case-top">
+        <div class="wrapper">
+          <h2>Vintage Life</h2>
+          <p>
+            A convenient online
                 platform for users to find and buy vintage apparel, promoting
                 sustainability by giving old garments a new lease on life.
-              </p>
-              <p>
-                The app has iOS and web responsive designs. Both versions have
-                the same functions (browse and buy apparel, save items for
-                later, create an account for a quicker checkout). The web
-                responsive version has an additional launch page that also
-                advertises the app.
-              </p>
-              <h5>Responsibilities</h5>
-              <p>UX Research, UX Design, UI Design</p>
-              <a
-                href="https://www.figma.com/proto/bt3JEfXSqfoMxf0vELwsfa/Vintage-Life?page-id=135%3A11734&node-id=135%3A12065&viewport=586%2C212%2C0.09&scaling=scale-down&starting-point-node-id=135%3A12091"
-                class="button"
-                target="_blank"
-                >Show prototype</a
-              >
+          </p>
+          <a href="https://www.figma.com/proto/bt3JEfXSqfoMxf0vELwsfa/Vintage-Life?page-id=135%3A11734&type=design&node-id=135-12065&viewport=425%2C105%2C0.04&t=SbhGaYRXAWlOpz1E-1&scaling=scale-down&starting-point-node-id=135%3A12091&mode=design" target="_blank" class="button2 dynamic-button">Prototype <img src="assets/arrow-top-right.svg" alt="arrow top right"></a>
+          <div class="row">
+            <div class="flex-col">
+              <h6>Role</h6>
+              <hr />
+              <p>UX Research, UI Design</p>
             </div>
-            <!--end first column-->
-            <!--open second column-->
-            <div class="col-md-6 hidden">
-              <picture>
-                <source
-                  srcset="img/vintagelife/header@2x.png"
-                  media="(max-width:767px)"
-                />
-                <img
-                  src="img/vintagelife/header@1x.png"
-                  alt="Vintage Life mockup"
-                />
-              </picture>
-              <!--end of second column-->
+            <div class="flex-col">
+              <h6>Platform</h6>
+              <hr />
+              <p>iOS, Android, Web</p>
             </div>
-            <!--end row for (2 columns)-->
-          </section>
-          <!--end container/wrapper-->
+            <div class="flex-col">
+              <h6>Year</h6>
+              <hr />
+              <p>2022</p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <!-- Project planning -->
-        <div class="bg-100">
-          <!-- open container -->
-          <div class="container">
-            <!-- open row -->
-            <div class="row">
-              <h3>Project Planning</h3>
-              <!-- open first column -->
-              <div class="col-md-6">
-                <h5>Who</h5>
+      <section class="background-grey">
+<div class="wrapper">
+    <h3>Project Planning</h3>
+    <div class="two-column-grid">
+    <div class="left-col">
+  <h6>Who</h6>
                 <p>
                   People who want to buy vintage apparel without going to a
                   physical store.
                 </p>
-                <h5>What</h5>
+                <h6>What</h6>
                 <p>
                   A mobile app (and responsive website) that shows users the
-                  inventory and can be filtered in particular ways depending on
-                  their needs. Users can purchase without any goods and choose
-                  various payment methods.
+                  inventory and can be filtered in depending on
+                  their needs. 
                 </p>
-                <h5>When</h5>
+            </div>
+            <div class="right-col">
+                <h6>When</h6>
                 <p>
-                  This product will be used on commutes, in the evenings, during
+                    This product will be used on commutes, in the evenings, during
                   lunch breaks, and on weekends.
                 </p>
-                <div></div>
-              </div>
-              <!-- end first column -->
-              <!-- open second column -->
-              <div class="col-md-6">
-                <h5>Where</h5>
+                <h6>Why</h6>
                 <p>
-                  Users can easily shop from anywhere they can connect to the
-                  internet, whether on a mobile device or on a desktop with the
-                  app (iOS only) or the responsive website.
+                    Users don't have the time or ability to visit physical stores.
                 </p>
-                <h5>Why</h5>
-                <p>
-                  Users don't have the time or ability to visit physical stores.
-                </p>
-              </div>
-              <!-- end second column -->
             </div>
-            <!-- end row -->
-          </div>
-          <!-- end container/wrapper -->
         </div>
+  <div>
+      </section>
 
-        <!-- User flow -->
-        <!-- open container/wrapper -->
-        <div class="container">
-          <!-- open row -->
-          <div class="row">
-            <!-- open first column -->
-            <div class="col-md-6">
+      <section>
+            <div class="wrapper">
               <h3>User Flow</h3>
-              <p>
-                With a clear understanding of the user in mind thanks to the
-                user stories, user flows were the first step towards designing a
-                solution. A rough idea of the required screens was subsequently
-                developed leading to a user flow diagram representing all the
-                steps a user will take to complete the tasks.
-              </p>
+              <p>After understanding the user through user stories, the design process began with user flows, leading to a rough sketch of necessary screens. This evolved into a user flow diagram outlining all the steps a user takes to complete tasks.</p>
+              <img src="assets/vintagelife/user-flow@1x.png" alt="User Flow diagram">
             </div>
-            <!-- end first column -->
-            <!-- open second column -->
-            <div class="col-md-6">
-              <h5>Defined Features</h5>
-              <ul>
-                <li>Homepage featuring special offers and recommendations</li>
-                <li>Search function with previous search history</li>
-                <li>Shopping bag preview page</li>
-                <li>Express or member checkout</li>
-              </ul>
-            </div>
-            <!-- end second column -->
-            <div>
-              <picture>
-                <source
-                  srcset="img/vintagelife/user-flow@2x.png"
-                  media="(max-width:767px)"
-                />
-                <img
-                  src="img/vintagelife/user-flow@1x.png"
-                  alt="User Flow Diagram"
-                />
-              </picture>
-            </div>
-          </div>
-          <!-- end row for (2) columns -->
-        </div>
-        <!-- end container/wrapper -->
+          </section>
 
-        <!-- Low to mid wireframes -->
-        <!-- begin background -->
-        <div class="bg-100">
-          <!--open container/wrapper-->
-          <div class="container">
-            <!--open row for two columns-->
-            <div class="row">
-              <!--open first column-->
-              <div class="col-md-6 col-lg-5">
-                <div>
-                  <h3>Low to Mid-Fidelity Wireframes</h3>
-                </div>
-                <p>
-                  I sketched the preliminary design ideas on paper before using
-                  Figma to create mid-fidelity wireframes that could be quickly
-                  prototyped for user testing.
-                </p>
-              </div>
-              <!--end first column-->
-              <!--open second column-->
-              <div class="col-md-6 col-lg-7">
-                <picture>
-                  <source
-                    srcset="img/vintagelife/low-mid-wireframes@2x.png"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="img/vintagelife/low-mid-wireframes@1x.jpg"
-                    alt="Low to Mid Wireframes"
-                  />
-                </picture>
-              </div>
-              <!--end second column-->
-            </div>
-            <!--end row for (2) columns-->
-          </div>
-          <!--end of container/wrapper-->
-        </div>
-        <!-- end background -->
-
-        <!-- User testing -->
-        <!--open container/wrapper-->
-        <div class="container">
-          <!-- open row for two columns -->
-          <div class="row" style="margin-bottom: 0">
-            <!--open first column-->
-            <div class="col-md-6">
-              <h3>User Testing</h3>
-              <p>
-                Usability testing was conducted remotely over Skype and Zoom
-                with users ranging from the age of 26 to 33. Users were asked to
-                accomplish 2 tasks:
-              </p>
-            </div>
-            <!--end first column-->
-            <!--open second column-->
-            <div class="col-md-6">
-              <p class="quote">
-                “Imagine you have just installed Vintage Life, you want to
-                browse the selection to see if there is anything you might want
-                to buy before creating an account. Add some items to your
-                wishlist before creating an account”.
-              </p>
-              <p class="quote">
-                “Imagine you were using the app earlier today and added several
-                items to your cart that you are now ready to buy. Starting from
-                the home screen, find your bag and check out.”
-              </p>
-            </div>
-            <!--end second column-->
-          </div>
-          <!-- end row for (2) columns -->
-        </div>
-        <!--end of container/wrapper-->
-
-        <!-- Feedback -->
-        <div class="bg-100">
-          <!--open container/wrapper-->
-          <div class="container">
-            <!--open row for two columns-->
-            <div class="row" style="margin-top: 0">
-              <!--open first column-->
-              <div class="col-md-6 col-lg-5">
-                <h4>Positive Feedback</h4>
-                <ul>
-                  <li>Easy navigation</li>
-                  <li>Intuitive tab bar</li>
-                  <li>No pain points when completing tasks</li>
-                </ul>
-              </div>
-              <!--end first column-->
-              <!--open second column-->
-              <div class="col-md-6 col-lg-7">
-                <h4>Constructive Feedback</h4>
-                <ul>
-                  <li>
-                    The bag icon in the tab bar was not showing how many items
-                    were in the bag
-                  </li>
-                  <li>
-                    Placeholders were missing on the checkout screen for date of
-                    birth
-                  </li>
-                  <li>Item page had a lot of unused space above the picture</li>
-                  <li>
-                    Inconsistent language (ex: both "sign in" and "log in" were
-                    used on different screens
-                  </li>
-                </ul>
-              </div>
-              <!-- end second column-->
-              <!-- open double column section -->
-              <div>
-                <p>
-                  All users succesfully completed the tasks, constructive
-                  feedback was given regarding some oversights that could hinder
-                  usability. Usability testing was fruitful in identifying minor
-                  design flaws that were quickly resolved. Feedback was
-                  otherwise very positive and no major setbacks were identified.
-                </p>
-              </div>
-              <!-- end double column section -->
-            </div>
-            <!-- end row for (2) columns -->
-          </div>
-          <!--end of container/wrapper-->
-        </div>
-
-        <!-- Colors -->
-        <!--begin background  -->
-        <div>
-          <!--open container/wrapper-->
-          <div class="container">
-            <!--open row for two columns-->
-            <div class="row">
-              <!--open first column-->
-              <div class="col-md-6">
-                <h3>Colors</h3>
-                <p>
-                  The brand color is a cobalt green. Green is universally linked
-                  with nature, representing growth and renewal (i.e. more
-                  sustainable e-commerce). The cool cobalt saturation is both
-                  soothing and peaceful.
-                </p>
-                <p>
-                  Black and white are the other two dominant colors. The
-                  secondary green is a lighter shade of the primary one keeping
-                  the palette limited to three colors (considering grey as an
-                  intermediary). Resulting in a very clean and bright interface
-                  that is inviting.
-                </p>
-              </div>
-              <!--end first column-->
-              <!--open second column-->
-              <div class="col-md-6 container4">
-                <picture>
-                  <source
-                    srcset="img/vintagelife/colors@2x.png"
-                    media="(max-width:767px)"
-                  />
-                  <img src="img/vintagelife/colors@1x.png" alt="Color Scheme" />
-                </picture>
-              </div>
-              <!--end second column-->
-            </div>
-            <!-- end row -->
-          </div>
-          <!--end of container/wrapper-->
-        </div>
-        <!-- end background -->
-
-        <!-- start background -->
-        <div class="bg-100">
-          <!--open container/wrapper-->
-          <div class="container">
-            <!-- open row -->
-            <div class="row">
-              <!--open first column-->
-              <div class="col-md-6">
-                <h3>Typography</h3>
-                <p>
-                  The primary aim with the typography is to reinforce the
-                  functional and minimalist design.
-                </p>
-                <p>
-                  Futura-Bold font makes for clean-looking headlines and text
-                  that is easy to read. Designed by Paul Renner and released in
-                  1927, it was inspired by the concepts of Bauhaus.
-                </p>
-                <p>
-                  Designed by the Dutch software developer Ralph Levien,
-                  Inconsolata has clean lines that make it highly readable.
-                </p>
-              </div>
-              <!--end first column-->
-              <!--open second column-->
-              <div class="col-md-6 container4">
-                <picture>
-                  <source
-                    srcset="img/vintagelife/typography@2x.png"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="img/vintagelife/typography@1x.png"
-                    alt="Typography"
-                  />
-                </picture>
-              </div>
-              <!--end of second column-->
-            </div>
-            <!-- end row for (2) columns -->
-          </div>
-          <!-- end container -->
-        </div>
-        <!-- end background  -->
-
-        <!--mobile design-->
-        <div class="container">
-          <div class="row">
-            <h3 class="text-align">Final Mobile Design</h3>
-            <div>
-              <picture>
-                <source
-                  srcset="img/vintagelife/mobile-mockups-one@2x.png"
-                  media="(max-width:767px)"
-                />
-                <img
-                  src="img/vintagelife/mobile-mockups-one@1x.png"
-                  alt="Mobile Mockups Row One"
-                />
-              </picture>
-            </div>
-            <div>
-              <picture>
-                <source
-                  srcset="img/vintagelife/mobile-mockups-two@2x.png"
-                  media="(max-width:767px)"
-                />
-                <img
-                  src="img/vintagelife/mobile-mockups-two@1x.png"
-                  alt="Mobile Mockups Row Two"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-
-        <!--web responsive design-->
-        <div class="container">
-          <div class="row">
-            <h3 class="text-align">Web Responsive Design</h3>
-            <picture>
-              <source
-                srcset="img/vintagelife/web-responsive-mockups@2x.png"
-                media="(max-width:767px)"
-              />
-              <img
-                src="img/vintagelife/web-responsive-mockups@1x.png"
-                alt="Web Responsive Mockups"
-              />
-            </picture>
-          </div>
-        </div>
-
-        <!--landing page-->
-        <div class="container">
-          <div class="row">
-            <h3 class="text-align">Landing Page</h3>
-            <div>
-              <picture>
-                <source
-                  srcset="img/vintagelife/landing-page@2x.png"
-                  media="(max-width:767px)"
-                />
-                <img
-                  src="img/vintagelife/landing-page@1x.png"
-                  alt="Landing Page"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-
-        <!--conclusion-->
-        <div class="bg-100">
-          <!--open container/wrapper-->
-          <div class="container">
-            <div class="row">
-              <!--open first column-->
-              <div class="col-md-6 col-lg-5">
-                <h3>Final Thoughts</h3>
-                <div>
-                  <h5>What went well?</h5>
-                  <p>
-                    Building a cohesive brand from the start really helped to
-                    keep the design process all the way from low fidelity
-                    wireframes to the final mockups rather smooth.
-                  </p>
-                </div>
-                <div>
-                  <h5>What were the challenges?</h5>
-                  <p>
-                    While waiting for additional feedback after my usability
-                    test I decided to start working on a web responsive version
-                    fo the app. Adding on more work when there was no need was
-                    an easily avoidable issue.
-                  </p>
-                </div>
-                <div>
-                  <h5>What could be improved?</h5>
-                  <p>
-                    For pragmatic reasons pictures were primarily sourced from
-                    free of use Pexel stock photos and were supplemented by some
-                    of my own. Future iterations could have a more united visual
-                    style.
-                  </p>
-                </div>
-              </div>
-              <!--end first column-->
-              <!-- open second column -->
-              <div class="col-md-6 col-lg-7 footermock">
-                <picture>
-                  <source
-                    srcset="img/vintagelife/footer-mockup@2x.png"
-                    media="(max-width:767px)"
-                  />
-                  <img
-                    src="img/vintagelife/footer-mockup@1x.png"
-                    alt="Footer Mockup"
-                  />
-                </picture>
-              </div>
-              <!-- end second column -->
-            </div>
-            <!-- end row for (2) column -->
-          </div>
-          <!-- end container -->
-        </div>
-        <!-- end section block -->
+          <section class="background-grey">
+      <div class="wrapper">
+        <h3>Low to Mid-Fidelity Wireframes</h3>
+        <div class="two-column-grid">
+          <p class="left-col">I sketched the preliminary design ideas on paper before using
+            Figma to create mid-fidelity wireframes that could be quickly
+            prototyped for user testing.</p>
+        <img src="assets/vintagelife/low-mid-wireframes@1x.jpg" class="right-col" alt="Low Fidelity Wireframes">
       </div>
+      </div>
+    </section>
 
-      <!-- return to top button -->
-      <button id="return-top" aria-label="return top">
-        <i class="fas fa-chevron-up"></i>
-      </button>
+    <section>
+      <div class="wrapper">
+        <h3>Colors and Accessibility</h3>
+        
+      <div class="two-column-grid">
+        <div class="left-col">
+          <p>The brand features a primary cobalt green color, symbolizing growth and renewal with its natural connotations and offering a soothing, peaceful ambiance. </p>
+          <p>Complemented by black and white, the secondary green is a lighter variant of the primary, creating a clean, minimal, interface. A contrast checker was used to check that designs were all at least AA compliant.</p>
+        </div>
+        <img src="assets/vintagelife/colors.png" class="right-col" alt="Color Scheme">
+    </section>
+
+    <section class="wrapper">
+      <h3>High Fidelity Designs</h3>
+      <div>
+      <h5>Mobile Designs</h5>
+      <div class="image-gallery">
+        <div class="image-row">
+            <img src="assets/vintagelife/mobile-mockup-01.png" alt="Image Description" class="gallery-image">
+            <img src="assets/vintagelife/mobile-mockup-02.png" alt="Image Description" class="gallery-image">
+            <img src="assets/vintagelife/mobile-mockup-03.png" alt="Image Description" class="gallery-image">
+            <img src="assets/vintagelife/mobile-mockup-04.png" alt="Image Description" class="gallery-image">
+            <img src="assets/vintagelife/mobile-mockup-05.png" alt="Image Description" class="gallery-image">
+            <img src="assets/vintagelife/mobile-mockup-06.png" alt="Image Description" class="gallery-image">
+            <img src="assets/vintagelife/mobile-mockup-07.png" alt="Image Description" class="gallery-image">
+            <img src="assets/vintagelife/mobile-mockup-08.png" alt="Image Description" class="gallery-image">
+            <img src="assets/vintagelife/mobile-mockup-09.png" alt="Image Description" class="gallery-image">
+            <img src="assets/vintagelife/mobile-mockup-10.png" alt="Image Description" class="gallery-image">
+        </div>
+    </div>
+  </div>
+  <div>
+    <h5>Web Responsive Designs</h5>
+    <div class="image-gallery">
+      <div class="image-row">
+          <img src="assets/vintagelife/responsive-mockup-01.png" alt="Image Description" class="gallery-image">
+          <img src="assets/vintagelife/responsive-mockup-02.png" alt="Image Description" class="gallery-image">
+          <img src="assets/vintagelife/responsive-mockup-03.png" alt="Image Description" class="gallery-image">
+          <img src="assets/vintagelife/responsive-mockup-04.png" alt="Image Description" class="gallery-image">
+          <img src="assets/vintagelife/responsive-mockup-05.png" alt="Image Description" class="gallery-image">
+          <img src="assets/vintagelife/responsive-mockup-06.png" alt="Image Description" class="gallery-image">
+          <img src="assets/vintagelife/responsive-mockup-07.png" alt="Image Description" class="gallery-image">
+          <img src="assets/vintagelife/responsive-mockup-08.png" alt="Image Description" class="gallery-image">
+      </div>
+  </div>
+</div>
+  </section>
+
+  <section class="wrapper">
+    <h3>Final Thoughts</h3>
+    <div class="two-column-grid">
+      <div class="left-col">
+          <h6>What went well?</h6>
+          <p>
+            Establishing a strong brand identity early on streamlined our design process from initial wireframes to final mockups.
+          </p>
+          <h6>What could be improved?</h6>
+          <p>
+Branding could benefit from more rules to keep the visual style cohesive.
+          </p>
+        </div>
+        <div class="right-col">
+          <img src="assets/vintagelife/end-mockup.png" alt="Phone and Browser Mockup">
+        </div>
+    </div>
+  </section>
     </main>
 
-    <!--footer-->
     <footer id="contact">
-      <div class="footer-content">
-        <img
-          class="footer-logo"
-          src="img/footer-logo.svg"
-          alt="James_David logo"
-        />
-        <p id="email">
-          Email: <a href="javascript:void(0);" id="email-link">Click to view</a>
-        </p>
+      <div class="wrapper">
+        <h2>Let's work together</h2>
+        <hr>
+          <a href="javascript:void(0);" id="email-link" class="button2 dynamic-button">Click to view</a>
 
-        <!--Social Media Layout and Placeholders-->
-        <!--Linkedin-->
         <div class="social-media">
-          <a href="#" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
+          <a href="https://www.linkedin.com/in/jamesdavidturrell/" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <i class="fab fa-linkedin-in dynamic-button"></i>
+          </a>
+          <a href="" class="social-icon">
+            <i class="fa-brands fa-behance dynamic-button"></i>
           </a>
         </div>
-      </div>
-      <div id="copyright">
-        <sup>© James David 2024</sup>
-      </div>
+          <p>
+        <p>© Code by James David </p>
+      </p>
     </footer>
-
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
     <script src="js/scripts.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/top.js"></script>
   </body>
 </html>
