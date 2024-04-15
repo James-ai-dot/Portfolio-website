@@ -8,7 +8,7 @@
   --purple-700: hsl(275, 82%, 30%);
   --purple-800: hsl(275, 82%, 22%);
   --purple-900: hsl(275, 10%, 15%);
-  --grey-100: hsl(120, 03%, 98%);
+  --grey-100: hsl(120, 01%, 98%);
   --white: #ffffff;
   --black: #041404;
   /*========== Spacing ==========*/
@@ -77,8 +77,8 @@ h5 {
 h6 {
   font-size: 1.8em;
   font-weight: 500;
-  margin-top: var(--space-sm);
-  margin-bottom: var(--space-xs);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 p {
@@ -189,6 +189,7 @@ ul li a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.8em;
   cursor: pointer;
   transition: color 0.3s, border-color 0.3s;
   z-index: 1;
@@ -546,6 +547,10 @@ footer p {
   );
 }
 
+.rewind-background {
+  background-image: url(../assets/rewind/memphis-background.png);
+}
+
 .case-top {
   text-align: center;
 }
@@ -800,7 +805,7 @@ footer p {
 
   .image-row .gallery-image {
     width: auto;
-    max-height: 600px;
+    max-height: 60vh;
     border-radius: 2.4rem;
   }
 
